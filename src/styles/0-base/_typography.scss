@@ -1,0 +1,25 @@
+@use "../constants";
+@use "../material";
+
+body {
+  font-size: 14px;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Material typography*/
+  margin: 0;
+  height: 100%;
+  // font-size: mat-font-size(material.$custom-typography, body-1);
+  // font-family: mat-font-family(material.$custom-typography);
+  // line-height: mat-line-height(material.$custom-typography, body-1);
+}
+
+a {
+  @apply no-underline;
+}
+
+p code,
+li code {
+  @apply p-1 rounded-md;
+}

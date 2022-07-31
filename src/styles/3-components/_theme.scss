@@ -1,0 +1,9 @@
+@use "app-icon/app-icon-theme";
+@use "button/button-theme";
+@use "post-element/post-element-theme";
+
+@mixin theme($theme) {
+  @include app-icon-theme.theme($theme);
+  @include button-theme.theme($theme);
+  @include post-element-theme.theme($theme);
+}

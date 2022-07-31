@@ -1,0 +1,25 @@
+@use "../../constants";
+
+ngnr-history {
+  h1.mat-headline.title {
+    @apply mb-5;
+  }
+
+  button.mat-flat-button {
+    @apply leading-8;
+  }
+
+  ol li {
+    > div {
+      @apply flex flex-col md:flex-row md:items-center md:justify-between;
+
+      small {
+        @apply text-right md:text-left;
+      }
+    }
+
+    ul {
+      @apply mt-2;
+    }
+  }
+}

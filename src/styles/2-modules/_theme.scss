@@ -1,0 +1,7 @@
+@use "articles/articles-theme";
+@use "history/history-theme";
+
+@mixin theme($theme) {
+  @include articles-theme.theme($theme);
+  @include history-theme.theme($theme);
+}

@@ -1,0 +1,23 @@
+@use "sass:map";
+@use "../../constants";
+@use "../../mixins";
+
+@mixin theme($theme) {
+  $is-dark-theme: map.get($theme, is-dark);
+
+  .toolbar {
+    background-color: if(
+      $is-dark-theme,
+      constants.$neer-blue-900,
+      constants.$neer-blue-200
+    );
+
+    mat-icon {
+      color: if(
+        $is-dark-theme,
+        constants.$neer-color-primary-light,
+        constants.$neer-color-primary
+      );
+    }
+  }
+}

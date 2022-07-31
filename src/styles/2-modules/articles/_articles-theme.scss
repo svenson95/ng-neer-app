@@ -1,0 +1,25 @@
+@use "sass:map";
+@use "../../constants";
+@use "@angular/material" as mat;
+
+@mixin theme($theme) {
+  $is-dark-theme: map.get($theme, is-dark);
+
+  ngnr-articles {
+    a {
+      background-color: if(
+        $is-dark-theme,
+        constants.$neer-font-color-1-light,
+        constants.$neer-font-color-1-dark
+      );
+
+      > span {
+        color: if(
+          $is-dark-theme,
+          constants.$neer-font-color-3-dark,
+          constants.$neer-font-color-3-light
+        );
+      }
+    }
+  }
+}

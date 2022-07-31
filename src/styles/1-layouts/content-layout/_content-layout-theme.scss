@@ -1,0 +1,19 @@
+@use "sass:map";
+@use "../../constants";
+@use "@angular/material" as mat;
+
+@mixin theme($theme) {
+  $is-dark-theme: map.get($theme, is-dark);
+
+  hr {
+    background-color: if(
+      $is-dark-theme,
+      constants.$neer-font-color-3-light,
+      constants.$neer-font-color-3-dark
+    );
+  }
+
+  .mat-button-focus-overlay {
+    background: lightgray;
+  }
+}

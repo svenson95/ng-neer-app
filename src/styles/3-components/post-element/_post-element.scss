@@ -1,0 +1,125 @@
+@use "../../constants";
+
+ngnr-post-element {
+  @apply flex flex-col overflow-x-scroll;
+
+  &::-webkit-scrollbar {
+    height: constants.$neer-scrollbar-width;
+    overflow-y: scroll;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply rounded-none;
+  }
+
+  &.answer {
+    button + ul {
+      padding-left: 40px;
+    }
+  }
+
+  &.answer button + p,
+  &.answer button + ul,
+  &.answer button + ol,
+  .answer-group {
+    padding: 40px 20px 20px;
+    margin-top: 0;
+    position: relative;
+
+    &:after {
+      content: "Lösung";
+      width: 1rem;
+      font-size: 0.8rem;
+      position: absolute;
+      top: 8px;
+      left: 12px;
+    }
+  }
+
+  /* HINT */
+  .hint-element {
+    @apply p-4 border-l-4 border-solid;
+    border-top-right-radius: constants.$neer-border-radius;
+    border-bottom-right-radius: constants.$neer-border-radius;
+  }
+
+  /* ORDERED LIST */
+  ol {
+    counter-reset: ordered-list-counter;
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      margin-left: 15px;
+      counter-increment: ordered-list-counter;
+      display: flex;
+      align-items: center;
+    }
+
+    li::before {
+      content: counter(ordered-list-counter);
+      $size: 32px;
+      left: calc(-1 * $size - 10px);
+      line-height: calc($size - 1px);
+      width: $size;
+      height: $size;
+      //top: 0;
+      border-radius: 50%;
+      text-align: center;
+      flex-shrink: 0;
+      margin-right: 10px;
+    }
+  }
+
+  > ul {
+    @apply pl-7;
+  }
+
+  span,
+  ul ul > span,
+  ol li:not(:last-of-type),
+  ul li:not(:last-of-type),
+  ul ul li:not(:last-of-type) {
+    @apply mb-2;
+  }
+
+  /* IMAGE */
+  div img {
+    border-radius: constants.$neer-border-radius;
+  }
+
+  /* TABLE */
+  table tr {
+    th,
+    td {
+      @apply text-left p-2 border-2 border-solid;
+    }
+
+    .left {
+      @apply text-left;
+    }
+    .middle {
+      @apply text-center;
+    }
+    .right {
+      @apply text-right;
+    }
+  }
+
+  /* TABLE-GROUP */
+  .table-group > ngnr-post-element table {
+    margin: 0;
+  }
+
+  /* CODE */
+  pre code {
+    &::-webkit-scrollbar {
+      height: constants.$neer-scrollbar-width;
+      overflow-y: scroll;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 0;
+    }
+  }
+}

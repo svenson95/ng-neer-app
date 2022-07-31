@@ -1,0 +1,138 @@
+@use "sass:map";
+@use "../../constants";
+@use "@angular/material" as mat;
+
+@mixin theme($theme) {
+  $is-dark-theme: map.get($theme, is-dark);
+
+  ngnr-post-element {
+    &::-webkit-scrollbar {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: constants.$neer-color-tertiary;
+    }
+
+    /* QUESTION-ANSWER */
+    &.is-open button {
+      color: constants.$neer-font-color-3-dark;
+      border-color: rgba(constants.$neer-gray-1, 0.6);
+    }
+
+    &.answer button + p,
+    &.answer button + ul,
+    &.answer button + ol,
+    .answer-group {
+      background-color: constants.$neer-blue-100;
+
+      &:after {
+        background-color: constants.$neer-blue-100;
+        color: rgba(constants.$neer-color-tertiary, 0.8);
+      }
+
+      /* ANSWER - TABLE */
+      table {
+        tr th {
+          background: constants.$neer-gray-2;
+        }
+
+        tr th,
+        tr td {
+          border-color: constants.$neer-gray-2;
+        }
+      }
+
+      /* ANSWER - CODE */
+      code {
+        border-color: constants.$neer-color-tertiary;
+      }
+    }
+
+    /* HINT */
+    .hint-element {
+      color: if(
+        $is-dark-theme,
+        constants.$neer-font-color-1-dark,
+        constants.$neer-font-color-1-light
+      );
+      background: if(
+        $is-dark-theme,
+        constants.$neer-font-color-1-light,
+        constants.$neer-font-color-1-dark
+      );
+      border-left-color: if(
+        $is-dark-theme,
+        constants.$neer-color-primary-light,
+        constants.$neer-color-primary
+      );
+    }
+
+    /* Code */
+    code {
+      background: if(
+        $is-dark-theme,
+        constants.$neer-font-color-1-light,
+        constants.$neer-font-color-1-dark
+      );
+      box-shadow: 0 0 4px rgb(var(--background-secondary), 0.5);
+
+      &::-webkit-scrollbar {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: constants.$neer-color-tertiary;
+      }
+
+      .dark,
+      .light {
+        .hljs-title {
+          color: #5491fe;
+        }
+      }
+
+      .light {
+        .hljs-keyword {
+          color: #9f00a9;
+        }
+      }
+
+      .dark {
+        .hljs-keyword {
+          color: #f000ff;
+        }
+
+        .hljs-title {
+          color: #5491fe;
+        }
+      }
+    }
+  }
+
+  /* ORDERED LIST */
+  ol li::before {
+    color: if(
+      $is-dark-theme,
+      constants.$neer-color-primary-light,
+      constants.$neer-color-primary
+    );
+    background: constants.$neer-font-color-2-dark;
+  }
+
+  /* TABLE */
+  table {
+    tr {
+      color: constants.$neer-font-color-1-dark;
+
+      th {
+        background: constants.$neer-font-color-2-dark;
+      }
+
+      th,
+      td {
+        border-color: constants.$neer-gray-2;
+      }
+    }
+  }
+}

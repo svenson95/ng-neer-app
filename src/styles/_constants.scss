@@ -1,0 +1,51 @@
+// TYPOGRAPHY
+$neer-font-primary: "Red Hat Text", -apple-system, BlinkMacSystemFont,
+  "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol";
+$neer-font-secondary: ui-sans-serif, system-ui, -apple-system,
+  BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+  "Noto Color Emoji";
+
+$neer-border-radius: 4px;
+$neer-scrollbar-width: 4px;
+$neer-max-width: 1200px;
+
+// THEME COLORS
+$neer-blue-50: #e3f2fd;
+$neer-blue-100: #bbdefb;
+$neer-blue-200: #91cbf9;
+$neer-blue-300: #65b6f6;
+$neer-blue-400: #43a6f5;
+$neer-blue-500: #2397f3;
+$neer-blue-600: #1f89e5;
+$neer-blue-700: #1a77d2;
+$neer-blue-800: #1666c0;
+$neer-blue-900: #052a53;
+
+$neer-red-50: #ffebee;
+$neer-red-100: #ffcdd2;
+$neer-red-200: #ef9a9a;
+$neer-red-300: #e57373;
+$neer-red-400: #ef5350;
+$neer-red-500: #f44336;
+$neer-red-600: #e53935;
+$neer-red-700: #d32f2f;
+$neer-red-800: #c62828;
+$neer-red-900: #b71c1c;
+
+$neer-color-primary: $neer-blue-800;
+$neer-color-primary-light: lighten($neer-color-primary, 20%);
+$neer-color-secondary: $neer-red-700;
+$neer-color-tertiary: $neer-blue-500;
+
+$neer-font-color-1-light: rgb(20, 20, 20);
+$neer-font-color-2-light: rgb(60, 60, 60);
+$neer-font-color-3-light: rgb(100, 100, 100);
+
+$neer-font-color-1-dark: rgb(250, 250, 250);
+$neer-font-color-2-dark: rgb(210, 210, 210);
+$neer-font-color-3-dark: rgb(170, 170, 170);
+
+$neer-gray-1: rgb(140, 140, 140);
+$neer-gray-2: rgb(110, 110, 110);

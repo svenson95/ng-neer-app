@@ -1,0 +1,16 @@
+@use "../app-theme";
+@use "../material";
+@use "@angular/material" as mat;
+
+$ng-neer-app-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: material.$ng-neer-app-primary,
+      accent: material.$ng-neer-app-accent,
+      warn: material.$ng-neer-app-warn,
+    ),
+  )
+);
+
+@include mat.all-component-themes($ng-neer-app-theme);
+@include app-theme.theme($ng-neer-app-theme);

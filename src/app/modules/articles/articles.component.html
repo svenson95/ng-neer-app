@@ -1,0 +1,35 @@
+<ul class="list-none flex flex-col p-0 gap-5">
+  <li *ngFor="let article of articles">
+    <a class="flex flex-col p-5 no-underline gap-2" [routerLink]="article.url">
+      <div class="flex flex-col md:flex-row md:items-center justify-between">
+        <span class="mat-body-strong" [innerHTML]="article.title"></span>
+        <small class="mat-body-small">
+          {{ article.date | date: "MMMM d, y" }}
+        </small>
+      </div>
+      <span
+        *ngIf="article.elements[0].content as description"
+        [innerText]="removeHrefs(description)"
+      ></span>
+    </a>
+  </li>
+</ul>
+
+<hr class="horizontal mt-40 mb-40" />
+
+<h4 class="mat-display-4">mat-display-4</h4>
+
+<h3 class="mat-display-3">mat-display-3</h3>
+
+<h2 class="mat-display-2">mat-display-2</h2>
+
+<h1 class="mat-display-1">mat-display-1</h1>
+
+<h2 class="mat-headline">mat-headline</h2>
+<h2 class="mat-title">mat-title</h2>
+<h3 class="subheading-2">subheading-2</h3>
+<h4 class="subheading-1">subheading-1</h4>
+
+<p class="mat-body">mat-body</p>
+<p class="mat-body-strong">mat-body-strong</p>
+<p class="mat-small">mat-small</p>

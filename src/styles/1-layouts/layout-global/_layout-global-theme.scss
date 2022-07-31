@@ -1,0 +1,62 @@
+@use "sass:map";
+@use "../../constants";
+@use "@angular/material" as mat;
+
+@mixin theme($theme) {
+  $is-dark-theme: map.get($theme, is-dark);
+
+  /* Set scrollbar color to dark (in chrome) */
+  @if $is-dark-theme {
+    :root {
+      color-scheme: dark;
+    }
+  }
+
+  body {
+    background-color: if(
+      $is-dark-theme,
+      constants.$neer-font-color-2-light,
+      constants.$neer-font-color-2-dark
+    );
+  }
+
+  main.content {
+    $color: if(
+      $is-dark-theme,
+      constants.$neer-font-color-3-light,
+      constants.$neer-font-color-3-dark
+    );
+
+    ngnr-app-icon {
+      svg {
+        fill: $color;
+      }
+
+      div span {
+        color: $color;
+      }
+    }
+
+    nav {
+      background-color: if(
+        $is-dark-theme,
+        constants.$neer-font-color-2-light,
+        constants.$neer-font-color-2-dark
+      );
+
+      .mat-tab-links {
+        .mat-tab-link {
+          height: 32px;
+
+          &:not(:last-of-type) {
+            border-right-color: if(
+              $is-dark-theme,
+              constants.$neer-font-color-3-light,
+              constants.$neer-font-color-3-dark
+            );
+          }
+        }
+      }
+    }
+  }
+}

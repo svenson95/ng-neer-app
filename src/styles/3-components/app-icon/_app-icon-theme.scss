@@ -1,0 +1,54 @@
+@use "sass:map";
+@use "../../constants";
+@use "@angular/material" as mat;
+
+@mixin theme($theme) {
+  $is-dark-theme: map.get($theme, is-dark);
+  $app-blue-shadow: 0 0 2px
+    rgba(
+      if(
+        $is-dark-theme,
+        constants.$neer-color-primary-light,
+        constants.$neer-color-primary
+      ),
+      0.712
+    );
+
+  ngnr-app-icon {
+    a {
+      &:hover,
+      &:focus {
+        svg {
+          filter: drop-shadow($app-blue-shadow);
+        }
+
+        span:nth-child(1) {
+          text-shadow: $app-blue-shadow;
+        }
+      }
+    }
+    span {
+      color: if(
+        $is-dark-theme,
+        constants.$neer-font-color-1-dark,
+        constants.$neer-font-color-1-light
+      );
+
+      &:nth-child(1) {
+        color: if(
+          $is-dark-theme,
+          constants.$neer-color-primary-light,
+          constants.$neer-color-primary
+        );
+      }
+    }
+
+    svg {
+      fill: if(
+        $is-dark-theme,
+        constants.$neer-color-primary-light,
+        constants.$neer-color-primary
+      );
+    }
+  }
+}

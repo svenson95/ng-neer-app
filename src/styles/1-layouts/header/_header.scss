@@ -1,0 +1,15 @@
+@use "../../../styles/constants";
+
+.toolbar {
+  #ngnr-icon {
+    svg {
+      height: 48px;
+      filter: none;
+    }
+
+    div span {
+      font-size: 2.2em;
+      text-shadow: none;
+    }
+  }
+}

@@ -3,16 +3,46 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CoreModule } from './core/core.module';
+import {
+  MAT_RIPPLE_GLOBAL_OPTIONS,
+  RippleGlobalOptions,
+} from '@angular/material/core';
+import { AppIconComponent } from './core/components/app-icon/app-icon.component';
+import { STORAGE_PROVIDERS } from './core/shared/storage.service';
+import { windowProvider, WindowToken } from './core/shared/window';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTabsModule } from '@angular/material/tabs';
+import { RouterModule, TitleStrategy } from '@angular/router';
+import { PageTitleStrategy } from './core/shared/page.title-strategy';
+
+const globalRippleConfig: RippleGlobalOptions = {
+  animation: {
+    enterDuration: 1000,
+    exitDuration: 1500,
+  },
+  terminateOnPointerUp: true,
+};
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    RouterModule,
+    AppRoutingModule,
+    CoreModule,
+    AppIconComponent,
+    MatButtonModule,
+    MatTabsModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    { provide: MAT_RIPPLE_GLOBAL_OPTIONS, useValue: globalRippleConfig },
+    STORAGE_PROVIDERS,
+    { provide: WindowToken, useFactory: windowProvider },
+    { provide: TitleStrategy, useClass: PageTitleStrategy },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

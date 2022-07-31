@@ -1,0 +1,15 @@
+@use "../../constants";
+
+hr {
+  @apply my-5 border-none;
+
+  &.vertical {
+    @apply h-full;
+    width: 1px;
+  }
+
+  &.horizontal {
+    @apply w-full;
+    height: 1px;
+  }
+}

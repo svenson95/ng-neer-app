@@ -1,0 +1,10 @@
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+  <h2 class="mat-header" [innerHTML]="article.title"></h2>
+  <small class="mat-body-small shrink-0">{{
+    article.date | date: "MMMM d, y"
+  }}</small>
+</div>
+<ngnr-post-element
+  *ngFor="let el of article.elements"
+  [element]="el"
+></ngnr-post-element>

@@ -1,0 +1,46 @@
+<!-- Toolbar -->
+<div
+  class="toolbar flex flex-col items-center justify-between pt-3 px-3 h-[30vh]"
+  role="banner"
+>
+  <div class="flex ml-auto gap-2">
+    <!-- <nav class="nav-links items-center gap-2 hidden sm:flex">
+      <a
+        aria-label="Articles"
+        routerLink="articles"
+        title="Articles"
+        mat-button
+        color="primary"
+      >
+        Articles
+      </a>
+      <a
+        aria-label="Angular history"
+        routerLink="history"
+        title="Angular history"
+        mat-button
+        color="primary"
+      >
+        History
+      </a>
+    </nav> -->
+    <div class="action-links flex" [class.opacity-0]="isLoading">
+      <ngnr-theme-toggle></ngnr-theme-toggle>
+    </div>
+  </div>
+
+  <a id="ngnr-icon" routerLink="/" mat-button>
+    <ngnr-app-icon></ngnr-app-icon>
+  </a>
+
+  <small
+    class="mat-small mb-3"
+    [class.opacity-0]="isLoading"
+    *ngIf="!isLoading; else spinner"
+  >
+    Angular docs extension
+  </small>
+  <ng-template #spinner>
+    <mat-spinner class="mb-3" diameter="20"></mat-spinner>
+  </ng-template>
+</div>

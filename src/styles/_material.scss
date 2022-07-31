@@ -1,0 +1,109 @@
+@use "./constants";
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use "@angular/material" as mat;
+// Plus imports for other components in your app.
+
+// $body-2:
+//     mat.define-typography-level(
+//       $font-weight: 700,
+//       $font-size: inherit,
+//       $line-height: 1,
+//       $letter-spacing: normal,
+//     ),
+
+// Define a custom typography config that overrides the font-family as well as the
+// `headlines` and `body-1` levels.
+$custom-typography: mat.define-typography-config(
+  $font-family: constants.$neer-font-primary,
+  $display-4: mat.define-typography-level(46px, 46px, 300),
+  $display-3: mat.define-typography-level(42px, 42px, 400),
+  $display-2: mat.define-typography-level(38px, 38px, 400),
+  $display-1: mat.define-typography-level(34px, 40px, 400),
+  $headline: mat.define-typography-level(24px, 32px, 400),
+  $title: mat.define-typography-level(20px, 32px, 500),
+  $subheading-2: mat.define-typography-level(18px, 28px, 400),
+  $subheading-1: mat.define-typography-level(16px, 24px, 400),
+  $body-2: mat.define-typography-level(14px, 24px, 700),
+  $body-1: mat.define-typography-level(14px, 20px, 400),
+  $caption: mat.define-typography-level(12px, 20px, 400),
+  $button: mat.define-typography-level(14px, 14px, 500),
+  $input: mat.define-typography-level(16px, 1.25, 400),
+);
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core($custom-typography);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$ng-neer-app-primary: mat.define-palette(mat.$blue-palette, 800);
+$ng-neer-app-accent: mat.define-palette(mat.$red-palette, 900);
+
+// The warn palette is optional (defaults to red).
+$ng-neer-app-warn: mat.define-palette(mat.$red-palette, 600);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+// $ng-neer-app-theme: mat.define-light-theme(
+//   (
+//     color: (
+//       primary: $ng-neer-app-primary,
+//       accent: $ng-neer-app-accent,
+//       warn: $ng-neer-app-warn,
+//     ),
+//   )
+// );
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+// @include mat.all-component-themes($ng-neer-app-theme);
+
+/* Reset material typography margins */
+// p
+.mat-body p,
+.mat-body-1 p,
+.mat-typography .mat-body p,
+.mat-typography .mat-body-1 p,
+.mat-typography p,
+// subheading
+.mat-h4,
+.mat-subheading-1,
+.mat-typography .mat-h4,
+.mat-typography .mat-subheading-1,
+.mat-typography h4,
+// headline
+.mat-h1,
+.mat-headline,
+.mat-typography .mat-h1,
+.mat-typography .mat-headline,
+.mat-typography h1,
+// h2
+.mat-h2,
+.mat-title,
+.mat-typography .mat-h2,
+.mat-typography .mat-title,
+.mat-typography h2,
+// h3
+.mat-h3,
+.mat-subheading-2,
+.mat-typography .mat-h3,
+.mat-typography .mat-subheading-2,
+.mat-typography h3,
+// display
+.mat-typography [class^="mat-display"] {
+  @apply m-0;
+}
+
+/* Reset material typography line-height */
+.mat-body,
+.mat-body-1,
+.mat-typography .mat-body,
+.mat-typography .mat-body-1,
+.mat-typography {
+  line-height: 1.8rem;
+}

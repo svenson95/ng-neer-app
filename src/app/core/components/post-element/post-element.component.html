@@ -1,0 +1,227 @@
+<!-- SHOW ANSWER BUTTON -->
+<button
+  class="h-fit"
+  *ngIf="element.hidden"
+  (click)="isVisible = !isVisible"
+  matRipple
+>
+  {{ isVisible ? "Ausblenden" : "Lösung anzeigen" }}
+</button>
+
+<!-- TITLE -->
+<h2
+  class="mat-title"
+  *ngIf="
+    element.type === ElementType.TITLE && (element.hidden ? isVisible : true)
+  "
+  [innerHTML]="element.content"
+></h2>
+
+<!-- SUBTITLE -->
+<h3
+  class="subheading-2"
+  *ngIf="
+    element.type === ElementType.SUBTITLE && (element.hidden ? isVisible : true)
+  "
+  [innerHTML]="element.content"
+></h3>
+
+<!-- TEXT -->
+<p
+  class="mat-body overflow-hidden"
+  *ngIf="
+    element.type === ElementType.TEXT && (element.hidden ? isVisible : true)
+  "
+  [innerHTML]="element.content"
+></p>
+
+<!-- HINT -->
+<p
+  class="mat-body hint-element"
+  *ngIf="
+    element.type === ElementType.HINT && (element.hidden ? isVisible : true)
+  "
+  [innerHTML]="element.content"
+></p>
+
+<!-- LINE -->
+<hr
+  class="horizontal"
+  *ngIf="
+    element.type === ElementType.LINE && (element.hidden ? isVisible : true)
+  "
+/>
+
+<!-- UNORDERED LIST -->
+<ng-container
+  *ngIf="
+    element.type === ElementType.LIST &&
+    !element.ordered &&
+    (element.hidden ? isVisible : true)
+  "
+>
+  <p
+    class="mat-body mb-2.5"
+    *ngIf="element.content"
+    [innerHTML]="element.content"
+  ></p>
+  <ul>
+    <li
+      [class.sublist-container]="isSublistItem(item)"
+      *ngFor="let item of element.list"
+    >
+      <p class="mat-body" *ngIf="isString(item)" [innerHTML]="item"></p>
+      <p
+        class="mat-body flex mb-2.5"
+        *ngIf="isSublistItem(item)"
+        [innerHTML]="item.content"
+      ></p>
+      <ul *ngIf="isSublistItem(item)">
+        <li *ngFor="let subItem of item.sublist">
+          <p class="mat-body" [innerHTML]="subItem"></p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</ng-container>
+
+<!-- ORDERED LIST -->
+<ng-container
+  *ngIf="
+    element.type === ElementType.LIST &&
+    element.ordered &&
+    (element.hidden ? isVisible : true)
+  "
+>
+  <p
+    class="mat-body mb-2.5"
+    *ngIf="element.content"
+    [innerHTML]="element.content"
+  ></p>
+  <ol>
+    <li *ngFor="let item of element.list">
+      <p class="mat-body" [innerHTML]="item"></p>
+    </li>
+  </ol>
+</ng-container>
+
+<!-- IMAGE -->
+<div
+  class="flex w-full max-w-screen-md"
+  *ngIf="
+    element.type === ElementType.IMAGE && (element.hidden ? isVisible : true)
+  "
+>
+  <img
+    class="max-w-full"
+    *ngIf="image"
+    [src]="image"
+    alt="image"
+    [class.small]="element.size === 's'"
+    [class.medium]="element.size === 'm'"
+    [class.large]="element.size === 'l'"
+  />
+  <mat-spinner *ngIf="image === null" diameter="24"></mat-spinner>
+  <p class="mat-body" *ngIf="image === false">image not found</p>
+</div>
+
+<!-- TABLE -->
+<p
+  class="mat-body"
+  *ngIf="
+    element.type === ElementType.TABLE &&
+    element.content !== '' &&
+    (element.hidden ? isVisible : true)
+  "
+  [innerHTML]="element.content"
+></p>
+<table
+  class="border-collapse table-fixed"
+  *ngIf="
+    element.type === ElementType.TABLE && (element.hidden ? isVisible : true)
+  "
+>
+  <tbody>
+    <tr *ngFor="let row of element.rows">
+      <ng-container *ngFor="let column of row.columns">
+        <th
+          *ngIf="row.type === 'header' && !column.rowSpan"
+          [colSpan]="column.colSpan"
+          [innerHTML]="column.content"
+          [class]="column.align"
+        ></th>
+        <th
+          *ngIf="row.type === 'header' && column.rowSpan"
+          [rowSpan]="column.rowSpan"
+          [innerHTML]="column.content"
+          [class]="column.align"
+        ></th>
+        <td
+          *ngIf="row.type === 'default' && !column.rowSpan"
+          [colSpan]="column.colSpan"
+          [innerHTML]="column.content"
+          [class]="column.align"
+        ></td>
+        <td
+          *ngIf="row.type === 'default' && column.rowSpan"
+          [rowSpan]="column.rowSpan"
+          [innerHTML]="column.content"
+          [class]="column.align"
+        ></td>
+      </ng-container>
+    </tr>
+  </tbody>
+</table>
+
+<!-- TABLE-GROUP -->
+<div
+  class="table-group inline-flex flex-wrap"
+  *ngIf="
+    element.type === ElementType.TABLE_GROUP &&
+    (element.hidden ? isVisible : true)
+  "
+>
+  <ngnr-post-element
+    class="m-2"
+    *ngFor="let table of element.elements"
+    [element]="table"
+  ></ngnr-post-element>
+</div>
+
+<!-- CODE -->
+<pre
+  class="flex m-0"
+  *ngIf="
+    element.type === ElementType.CODE && (element.hidden ? isVisible : true)
+  "
+>
+  <!-- <code class="w-full p-5 border-2 border-solid" [highlight]="element.content" [ngClass]="'language-' + element.language"></code> -->
+</pre>
+
+<!-- ANSWER-GROUP -->
+<div
+  class="answer-group"
+  *ngIf="
+    element.type === ElementType.ANSWER_GROUP &&
+    (element.hidden ? isVisible : true)
+  "
+>
+  <ngnr-post-element
+    *ngFor="let el of element.elements"
+    [element]="el"
+  ></ngnr-post-element>
+</div>
+
+<!-- YOUTUBE-VIDEO -->
+<div
+  class="relative pb-[56.25%] max-w-screen-md"
+  *ngIf="element.type === ElementType.YOUTUBE_VIDEO"
+>
+  <iframe
+    class="absolute top-0 left-0 w-full h-full"
+    [src]="youtubeSrc"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+  ></iframe>
+</div>

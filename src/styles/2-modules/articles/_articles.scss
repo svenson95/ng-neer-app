@@ -1,0 +1,14 @@
+@use "../../constants";
+
+/* Articles */
+ngnr-articles {
+  a {
+  }
+}
+
+/* Article */
+ngnr-article {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

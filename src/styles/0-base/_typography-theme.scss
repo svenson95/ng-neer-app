@@ -1,0 +1,64 @@
+@use "sass:map";
+@use "../constants";
+
+@mixin theme($theme) {
+  $is-dark-theme: map.get($theme, is-dark);
+
+  $font-color-primary: if(
+    $is-dark-theme,
+    constants.$neer-font-color-1-dark,
+    constants.$neer-font-color-1-light
+  );
+
+  $font-color-secondary: if(
+    $is-dark-theme,
+    constants.$neer-font-color-2-dark,
+    constants.$neer-font-color-2-light
+  );
+
+  body {
+    color: $font-color-primary;
+  }
+
+  h2 {
+    color: $font-color-primary;
+  }
+
+  p,
+  ol,
+  ul,
+  li,
+  input {
+    color: $font-color-secondary;
+  }
+
+  a {
+    color: if(
+      $is-dark-theme,
+      constants.$neer-color-primary-light,
+      constants.$neer-color-primary
+    );
+
+    &:hover {
+      text-decoration-color: $font-color-primary;
+    }
+  }
+
+  p code,
+  li code {
+    background-color: if(
+      $is-dark-theme,
+      constants.$neer-font-color-1-light,
+      constants.$neer-font-color-1-dark
+    );
+    color: if(
+      $is-dark-theme,
+      constants.$neer-font-color-1-dark,
+      constants.$neer-font-color-1-light
+    );
+
+    &::-webkit-scrollbar-thumb {
+      background: constants.$neer-color-tertiary;
+    }
+  }
+}

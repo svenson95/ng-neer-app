@@ -1,0 +1,51 @@
+@use "../../constants";
+
+ngnr-app-icon {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 200ms ease-in, border-radius 200ms ease-in;
+  user-select: none;
+
+  $app-red: constants.$neer-color-secondary;
+  $app-red-shadow: 0 0 2px rgba(constants.$neer-color-secondary, 0.712);
+
+  a {
+    &:hover,
+    &:focus {
+      span:nth-child(3) {
+        text-shadow: $app-red-shadow;
+      }
+    }
+  }
+
+  svg {
+    height: 24px;
+    border-radius: 50%;
+  }
+
+  div {
+    transform: translate(0px, -2px);
+    margin-right: 2px;
+  }
+
+  span {
+    font-family: "Catamaran", "Comic sans";
+    font-size: 1.2em;
+    letter-spacing: 2px;
+
+    &:nth-child(1) {
+      font-weight: 900;
+    }
+
+    &:nth-child(2) {
+      font-weight: 100;
+    }
+
+    &:nth-child(3) {
+      font-weight: 400;
+      color: $app-red;
+    }
+  }
+}

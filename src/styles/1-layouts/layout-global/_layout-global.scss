@@ -1,0 +1,40 @@
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main.content {
+  .mat-tab-links {
+    justify-content: center;
+
+    .mat-tab-link:not(:last-of-type) {
+      border-right-width: 1px;
+      border-right-style: solid;
+    }
+  }
+
+  ngnr-app-icon {
+    svg {
+      height: 48px;
+      filter: none;
+    }
+
+    div span {
+      font-size: 2.2em;
+      text-shadow: none;
+    }
+  }
+
+  nav {
+    position: sticky;
+  }
+}

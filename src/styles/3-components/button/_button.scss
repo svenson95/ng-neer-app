@@ -1,0 +1,9 @@
+@use "../../constants";
+
+a.mat-button-base,
+button.mat-button-base {
+  span.mat-ripple .mat-ripple-element {
+    background-color: white;
+    opacity: 0.2;
+  }
+}

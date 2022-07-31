@@ -1,0 +1,17 @@
+@use "sass:map";
+@use "../../constants";
+@use "@angular/material" as mat;
+
+@mixin theme($theme) {
+  $is-dark-theme: map.get($theme, is-dark);
+
+  .mat-flat-button,
+  .mat-raised-button,
+  .mat-fab,
+  .mat-mini-fab {
+    background-color: rgba(
+      if($is-dark-theme, constants.$neer-gray-2, constants.$neer-gray-1),
+      0.2
+    );
+  }
+}
