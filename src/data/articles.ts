@@ -19,22 +19,22 @@ export const testArticles: Array<Article> = [
       {
         type: 'TEXT',
         content:
-          "Motion is scientifically proven to attract attention, animations during a interactive process can improve the usability and user experience. Well-designed animations can make your application feel more straightforward to use. Motion itself can suggerate a loading state to the user, if something is moving probably it's loading yet.",
+          'Angular has a built-in animations builder, providing methods for defining web animation sequences, especially for complex animations with multiple transitions. Well-designed animations can make your application feel more straightforward to use.',
       },
       {
         type: 'HINT',
         content:
-          'Built-in animations builder, providing methods for defining web animation sequences, especially for complex animations with multiple transitions.',
+          'Motion is scientifically proven to attract attention, animations during a interactive process can improve the usability and user experience.',
       },
       {
         type: 'TEXT',
         content:
-          'The animations are internally implemented with the Web Animations API and CSS as a fallback. But why should we use this library? In the end it’s a question about your own preference and the animation you want to create. It is a choice between using JavaScript or CSS to define and trigger animations. You’ll find an interesting discussion on StackOverFlow about <a href="https://stackoverflow.com/questions/49628726/what-is-the-purpose-of-angular-animations" target="_blank">the purpose of the Angular animations system compared to CSS animations</a>.',
+          '@angular/animations uses the Web Animations API and CSS as a fallback, so why should we use this library? In the end it\'s a question about your own preference and the animation you want to create. It is a choice between using JavaScript or CSS for defining animations, you\'ll find an interesting discussion on StackOverFlow about <a href="https://stackoverflow.com/questions/49628726/what-is-the-purpose-of-angular-animations" target="_blank">the purpose of the Angular animations system compared to CSS animations</a>.',
       },
       {
         type: 'TEXT',
         content:
-          "One benefit from @angular/animations is that you got your condition variable connected with the animation directly. You don’t have to set and remove css classes conditionally, then write some keyframes and styling in css. Just plain JavaScript and a HTML annotation in the related elements, either a attribute like <code>@slideIn</code> or a condition <code>[@slideIn]=\"onSuccess\"</code>. <a href='https://auth0.com/blog/get-better-angular-ux-using-animation-techniques/#Brief-Overview-of-Angular-Animations' target='_blank'>More information.",
+          "To trigger and select the proper HTML elements we need to add the animations directive <code><p <b>@myAnimation<b>></p></code> One benefit from @angular/animations is that you got your condition variable connected with the animation directly. You don’t have to set and remove css classes conditionally, then write some keyframes and styling in css. Just plain JavaScript and a HTML annotation in the related elements, either a attribute like <code>@slideIn</code> or a condition <code>[@slideIn]=\"onSuccess\"</code>. <a href='https://auth0.com/blog/get-better-angular-ux-using-animation-techniques/#Brief-Overview-of-Angular-Animations' target='_blank'>More information.",
       },
       {
         type: 'LINE',
@@ -112,6 +112,9 @@ export const testArticles: Array<Article> = [
         list: [
           "Introduction to Angular animations | 30.07.2022 | <a href='https://angular.io/guide/animations' target='_blank' rel='noopener noreferrer'>https://angular.io/guide/animations</a>",
           "A web animations deep dive with Angular | 30.07.2022 | <a href='https://blog.thoughtram.io/angular/2017/07/26/a-web-animations-deep-dive-with-angular.html' target='_blank' rel='noopener noreferrer'>https://blog.thoughtram.io/angular/2017/07/26/a-web-animations-deep-dive-with-angular.html</a>",
+          "A guide to Animations in Angular | 30.07.2022 | <a href='https://blog.knoldus.com/a-guide-to-animations-in-angular/' target='_blank' rel='noopener noreferrer'>https://blog.knoldus.com/a-guide-to-animations-in-angular/</a>",
+          "CSS Transitions made simple with Angular Animations | 01.08.2022 | <a href='https://blog.mimacom.com/css-transitions-made-simple-with-angular-animations/' target='_blank' rel='noopener noreferrer'>https://blog.mimacom.com/css-transitions-made-simple-with-angular-animations/</a>",
+          "In-Depth guide into animations in Angular | 01.08.2022 | <a href='https://indepth.dev/posts/1285/in-depth-guide-into-animations-in-angular' target='_blank' rel='noopener noreferrer'>https://indepth.dev/posts/1285/in-depth-guide-into-animations-in-angular</a>",
         ],
       },
     ],
