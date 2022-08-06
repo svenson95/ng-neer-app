@@ -7,10 +7,15 @@ import { versions } from 'src/data/versions';
 })
 export class HistoryComponent {
   public versions = versions;
-  public orderReversed = false;
+  public orderReversed = true;
+
+  constructor() {
+    if (this.orderReversed) this.versions = versions.reverse();
+  }
 
   public get orderLabel(): string {
-    return this.orderReversed ? 'descending' : 'ascending';
+    const order = this.orderReversed ? 'descending' : 'ascending';
+    return `Sort ${order}`;
   }
 
   public isDateString(str: string): boolean {

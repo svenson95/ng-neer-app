@@ -1,0 +1,32 @@
+@use "../../constants";
+
+ngnr-landing {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  mat-tree.neer-tree {
+    background: transparent;
+
+    .example-tree-invisible {
+      display: none;
+    }
+
+    mat-icon {
+      display: flex;
+    }
+
+    .mat-nested-tree-node div[role="group"] {
+      padding-left: 20px;
+    }
+
+    /*
+     * Padding for leaf nodes.
+     * Leaf nodes need to have padding so as to align with other non-leaf nodes
+     * under the same parent.
+     */
+    div[role="group"] > .mat-tree-node {
+      padding-left: 20px;
+    }
+  }
+}
