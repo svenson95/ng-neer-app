@@ -62,14 +62,7 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "optimization": {
-                "fonts": {
-                  "inline": true
-                },
-                "styles": {
-                  "inlineCritical": true
-                }
-              },
+              "optimization": true,
               "outputHashing": "all"
             },
             "development": {
