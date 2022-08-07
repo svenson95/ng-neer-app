@@ -1,3 +1,27 @@
+<!-- Upcoming articles -->
+<h1>Upcoming articles</h1>
+<ul>
+  <li>
+    Angular explained and version history
+    <ul>
+      <li>Components, Services, Directives, Pipes</li>
+      <li>Preloading Strategy</li>
+    </ul>
+  </li>
+  <li>Folder structure best practices</li>
+  <li>Routing & guards</li>
+  <li>Components, inputs/outputs and lifecycle hooks</li>
+  <li>Services, data management with some rxjs</li>
+  <li>Pipes, pure function by default, for recurring tasks</li>
+  <li>Directives, logic binding for html elements</li>
+  <li>Observables, Subjects, state-management with rxjs</li>
+  <li>Server-Side-Rendering (SSR) with Angular Universal</li>
+  <li>Performance: Change Detection & angulars devtools plugin</li>
+  <li>Unit and integration tests to improve maintainability</li>
+</ul>
+
+<hr class="horizontal" />
+
 <ul class="list-none flex flex-col p-0 gap-5">
   <li *ngFor="let article of articles">
     <a class="flex flex-col p-5 no-underline gap-2" [routerLink]="article.url">
@@ -14,45 +38,3 @@
     </a>
   </li>
 </ul>
-
-<hr class="horizontal" />
-
-<!-- Planned articles -->
-<h1>Planned articles</h1>
-<ul>
-  <li>
-    Angular explained and version history
-    <ul>
-      <li>Components, Services, Directives, Pipes</li>
-      <li>Preloading Strategy</li>
-    </ul>
-  </li>
-  <li>Folder structure best practices</li>
-  <li>Routing & guards</li>
-  <li>Components, inputs/outputs and lifecycle hooks (change detection)</li>
-  <li>Services, data management with some rxjs</li>
-  <li>Pipes, pure function by default</li>
-  <li>Directives, logic binding for html elements</li>
-  <li>Observables, Subjects, state-management with rxjs</li>
-  <li>Server-Side-Rendering (SSR) with Angular Universal</li>
-  <li>Performance: Change Detection & angulars devtools plugin</li>
-  <li>Unit and integration tests to improve maintainability</li>
-  <li>@angular/animations api</li>
-</ul>
-
-<h4 class="mat-display-4">mat-display-4</h4>
-
-<h3 class="mat-display-3">mat-display-3</h3>
-
-<h2 class="mat-display-2">mat-display-2</h2>
-
-<h1 class="mat-display-1">mat-display-1</h1>
-
-<h2 class="mat-headline">mat-headline</h2>
-<h2 class="mat-title">mat-title</h2>
-<h3 class="subheading-2">subheading-2</h3>
-<h4 class="subheading-1">subheading-1</h4>
-
-<p class="mat-body">mat-body</p>
-<p class="mat-body-strong">mat-body-strong</p>
-<p class="mat-small">mat-small</p>

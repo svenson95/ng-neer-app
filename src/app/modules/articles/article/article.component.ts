@@ -13,7 +13,9 @@ export class ArticleComponent implements OnInit {
     const url = this.router.url;
     const articleUrl = url.substring(url.indexOf('/', 2) + 1, url.length);
     const article = testArticles.find((el) => articleUrl === el.url);
-    if (article) this.article = article;
+    if (article) {
+      this.article = article;
+    }
   }
 
   ngOnInit(): void {}

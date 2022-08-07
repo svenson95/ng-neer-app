@@ -5,7 +5,8 @@ import { RouterStateSnapshot, TitleStrategy } from '@angular/router';
 export class PageTitleStrategy extends TitleStrategy {
   override updateTitle(snapshot: RouterStateSnapshot): void {
     const title = this.buildTitle(snapshot);
-    if (title !== undefined) {
+
+    if (title) {
       document.title = 'ng-neer - ' + title;
     } else {
       document.title = 'ng-neer';
