@@ -16,7 +16,7 @@ export enum Theme {
 export class ThemeService {
   public isDark = false;
 
-  private get themeString(): string {
+  private get themeName(): string {
     return this.isDark ? Theme.DARK : Theme.LIGHT;
   }
 
@@ -24,15 +24,15 @@ export class ThemeService {
     @Inject(DOCUMENT) private document: Document,
     @Inject(LocalStorage) private storage: Storage
   ) {
-    this.initFromLocalStorage();
+    this.initializeThemeFromPreferences();
   }
 
   public toggle(): void {
     this.isDark = !this.isDark;
-    this.updateRenderedTheme();
+    this.changeAppTheme();
   }
 
-  public initFromLocalStorage(): void {
+  public initializeThemeFromPreferences(): void {
     const storedTheme = this.storage.getItem(THEME_STORAGE_KEY);
 
     if (storedTheme) {
@@ -41,49 +41,43 @@ export class ThemeService {
       this.isDark = matchMedia?.('(prefers-color-scheme: dark)').matches;
     }
 
-    this.appendThemeHeadTags(THEME_STORAGE_KEY, this.themeString);
+    this.appendLinkElement(THEME_STORAGE_KEY, this.themeName);
+    this.appendMetaElement(this.isDark);
   }
 
-  private updateRenderedTheme(): void {
-    this.updateThemeLink(THEME_STORAGE_KEY, this.themeString);
-    this.storage.setItem(THEME_STORAGE_KEY, this.themeString);
+  private changeAppTheme(): void {
+    this.updateLinkElement(THEME_STORAGE_KEY, this.themeName);
+    this.updateMetaElement(this.isDark);
+    this.storage.setItem(THEME_STORAGE_KEY, this.themeName);
   }
 
-  private appendThemeHeadTags(key: string, theme: string): void {
-    this.createThemeLink(key, theme);
-    this.createThemeMetaTag(this.isDark);
+  private appendLinkElement(key: string, theme: string): void {
+    const link = this.document.createElement('link');
+    link.id = key;
+    link.rel = 'stylesheet';
+    link.href = `${theme}-theme.css`;
+    this.document.head.appendChild(link);
   }
 
-  private createThemeLink(key: string, theme: string): void {
-    const linkElement = this.document.createElement('link');
-    linkElement.id = key;
-    linkElement.rel = 'stylesheet';
-    linkElement.href = `${theme}-theme.css`;
-    this.document.head.appendChild(linkElement);
-  }
-
-  private updateThemeLink(key: string, theme: string): void {
-    const linkElement = this.document.getElementById(key) as
+  private updateLinkElement(key: string, theme: string): void {
+    const link = this.document.getElementById(key) as
       | HTMLLinkElement
       | undefined;
-    if (!linkElement) return;
-    linkElement.href = `${theme}-theme.css`;
-    this.updateThemeMetaTag(this.isDark);
+    if (!link) return;
+    link.href = `${theme}-theme.css`;
   }
 
-  private createThemeMetaTag(isDark: boolean): void {
-    const metaElement = this.document.createElement('meta');
-    metaElement.name = 'theme-color';
+  private appendMetaElement(isDark: boolean): void {
+    const meta = this.document.createElement('meta');
+    meta.name = 'theme-color';
     // TODO: read hex colors from material theme
-    metaElement.content = isDark ? '#052a53' : '#91cbf9';
-    this.document.head.appendChild(metaElement);
+    meta.content = isDark ? '#052a53' : '#91cbf9';
+    this.document.head.appendChild(meta);
   }
 
-  private updateThemeMetaTag(isDark: boolean): void {
-    const metaElement = this.document.getElementsByName(
-      'theme-color'
-    )[0] as any;
-    metaElement.name = 'theme-color';
-    metaElement.content = isDark ? '#052a53' : '#91cbf9';
+  private updateMetaElement(isDark: boolean): void {
+    const meta = this.document.getElementsByName('theme-color')[0] as any;
+    meta.name = 'theme-color';
+    meta.content = isDark ? '#052a53' : '#91cbf9';
   }
 }

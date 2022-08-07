@@ -1,10 +1,8 @@
-import { ChangeDetectionStrategy, Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import {
   Router,
-  ChildrenOutletContexts,
   RouteConfigLoadStart,
   RouteConfigLoadEnd,
-  NavigationStart,
   NavigationEnd,
 } from '@angular/router';
 import { filter, Subscription } from 'rxjs';
