@@ -19,7 +19,13 @@ a {
   @apply no-underline;
 }
 
-p code,
-li code {
-  @apply p-1 rounded-md;
+p,
+li {
+  code {
+    @apply p-1 rounded-md;
+  }
+}
+
+code {
+  white-space: nowrap;
 }
