@@ -1,4 +1,6 @@
-export const versions = [
+import { AngularVersion } from 'src/app/core/models/angular-version';
+
+export const versions: Array<AngularVersion> = [
   {
     title: 'AngularJS / Angular 1',
     date: '2010.10.20',
