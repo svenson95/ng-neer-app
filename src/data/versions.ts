@@ -3,7 +3,7 @@ import { AngularVersion } from 'src/app/core/models/angular-version';
 export const versions: Array<AngularVersion> = [
   {
     title: 'AngularJS / Angular 1',
-    date: '2010.10.20',
+    date: '2010-10-20',
     description:
       'Introduced as an open-source, JavaScript-based frontend framework. AngularJS lets you extend HTML vocabulary for your application. The resulting environment is extraordinarily expressive, readable, and quick to develop.',
     link: 'https://angularjs.org/',
@@ -17,7 +17,7 @@ export const versions: Array<AngularVersion> = [
   },
   {
     title: 'Angular 2',
-    date: '2016.09.20',
+    date: '2016-09-20',
     description:
       'Complete rewrite of AngularJS to an TypeScript-based frontend framework.',
     link: null,
@@ -42,7 +42,7 @@ export const versions: Array<AngularVersion> = [
   },
   {
     title: 'Angular 4',
-    date: '2017.04.23',
+    date: '2017-04-23',
     description:
       'This version is backwards compatible with 2 in the most cases. There are no major differences between Angular 2 and Angular 4.',
     link: 'https://blog.angular.io/angular-4-3-now-available-8d57b57eb5a8',
@@ -59,7 +59,7 @@ export const versions: Array<AngularVersion> = [
   },
   {
     title: 'Angular 5',
-    date: '2017.11.01',
+    date: '2017-11-01',
     description: 'Some smaller updates & refactoring.',
     link: 'https://blog.angular.io/version-5-0-0-of-angular-now-available-37e414935ced',
     list: [
@@ -75,7 +75,7 @@ export const versions: Array<AngularVersion> = [
   },
   {
     title: 'Angular 6',
-    date: '2018.05.03',
+    date: '2018-05-03',
     description:
       'Released on May 2018 together with Angular CLI v6 and Material v6.',
     link: 'https://blog.angular.io/version-6-of-angular-now-available-cc56b0efa7a4',
@@ -92,7 +92,7 @@ export const versions: Array<AngularVersion> = [
   },
   {
     title: 'Angular 7',
-    date: '2018.10.18',
+    date: '2018-10-18',
     description:
       'Performance improvements and some new features. Synchronized released with Angular CLI 7 and Angular Material 7.',
     link: 'https://blog.angular.io/version-7-of-angular-cli-prompts-virtual-scroll-drag-and-drop-and-more-c594e22e7b8c',
@@ -105,7 +105,7 @@ export const versions: Array<AngularVersion> = [
   },
   {
     title: 'Angular 8',
-    date: '2019.05.28',
+    date: '2019-05-28',
     description:
       'Synchronized released with Angular CLI 8 and Angular Material 8.',
     link: 'https://blog.angular.io/version-8-of-angular-smaller-bundles-cli-apis-and-alignment-with-the-ecosystem-af0261112a27',
@@ -120,7 +120,7 @@ export const versions: Array<AngularVersion> = [
   },
   {
     title: 'Angular 9',
-    date: '2020.02.06',
+    date: '2020-02-06',
     description:
       'Came up with the most awaited Ivy compiler. Synchronized major release with Angular CLI 9 and Angular Material 9.',
     link: 'https://blog.angular.io/version-9-of-angular-now-available-project-ivy-has-arrived-23c97b63cfa3',
@@ -137,7 +137,7 @@ export const versions: Array<AngularVersion> = [
   },
   {
     title: 'Angular 10',
-    date: '2020.06.25',
+    date: '2020-06-25',
     description: 'Smaller release compared to other major releases.',
     link: 'https://blog.angular.io/version-10-of-angular-now-available-78960babd41',
     list: [
@@ -150,7 +150,7 @@ export const versions: Array<AngularVersion> = [
   },
   {
     title: 'Angular 11',
-    date: '2020.11.11',
+    date: '2020-11-11',
     description:
       'Released in Nov 2020 with a few popular bug fixes and some new features.',
     link: 'https://blog.angular.io/version-11-of-angular-now-available-74721b7952f7',
@@ -168,7 +168,7 @@ export const versions: Array<AngularVersion> = [
   },
   {
     title: 'Angular 12',
-    date: '2021.05.13',
+    date: '2021-05-13',
     description:
       "New cool features, more focused on open-source aspects with new contributor's guide, some Pull Requests from the community been added.",
     link: 'https://blog.angular.io/angular-v12-is-now-available-32ed51fbfd49',
@@ -189,7 +189,7 @@ export const versions: Array<AngularVersion> = [
   },
   {
     title: 'Angular 13',
-    date: '2021.11.03',
+    date: '2021-11-03',
     description: 'Expansion of Ivy-based features and optimizations',
     link: 'https://blog.angular.io/angular-v13-is-now-available-cce66f7bc296',
     list: [
@@ -209,7 +209,7 @@ export const versions: Array<AngularVersion> = [
   },
   {
     title: 'Angular 14',
-    date: '2022.06.02',
+    date: '2022-06-02',
     description:
       'From typed forms and standalone components to new primitives in the Angular <abbr title="Component Dev Kit">CDK</abbr>. This release includes many features and bug fixes directly contributed by community members, from adding router strong typing to more tree-shakable error messages.',
     link: 'https://blog.angular.io/angular-v14-is-now-available-391a6db736af',
