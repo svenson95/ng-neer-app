@@ -12,6 +12,14 @@
         constants.$neer-font-color-1-dark
       );
 
+      > div small {
+        color: if(
+          $is-dark-theme,
+          constants.$neer-font-color-1-dark,
+          constants.$neer-font-color-1-light
+        );
+      }
+
       > span {
         color: if(
           $is-dark-theme,

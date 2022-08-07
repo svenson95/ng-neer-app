@@ -48,6 +48,10 @@
         .mat-tab-link {
           height: 32px;
 
+          &.mat-tab-label-active {
+            opacity: 1;
+          }
+
           &:not(:last-of-type) {
             border-right-color: if(
               $is-dark-theme,
