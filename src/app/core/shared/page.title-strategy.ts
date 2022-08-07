@@ -12,7 +12,10 @@ export class PageTitleStrategy extends TitleStrategy {
       document.title = 'ng-neer - ' + title;
     } else if (isArticle) {
       const article = testArticles.find((a) => snapshot.url.includes(a.url));
-      document.title = article?.title + ' - ng-neer' ?? 'ng-neer | Article';
+
+      document.title = article?.title
+        ? article.title + ' - ng-neer'
+        : 'ng-neer | Article';
     } else {
       document.title = 'ng-neer';
     }
