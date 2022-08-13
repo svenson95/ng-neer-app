@@ -11,11 +11,113 @@ export interface Article {
 
 export const testArticles: Array<Article> = [
   {
+    url: 'angular-core-components',
+    title: '@angular/core | Components',
+    date: '2022-08-07',
+    lastUpdate: '2022-08-07',
+    elements: [
+      {
+        type: 'TEXT',
+        content:
+          'Architectural patterns like <abbr title="Model-View-View-Model">MVVM</abbr> and <abbr title="Model-View-Controller">MVC</abbr> describcing the way, how the different files (logic, template, style) of a component working together to keep changes between the view (template) and the state (logic) in sync. A lot of people on StackOverFlow say that angular is neither MVVC or MVC, it\'s more like a <i>component-based</i> architecture.',
+      },
+      {
+        type: 'TEXT',
+        content:
+          'Angular applications consists at least of one component, the <code>AppComponent</code> as the entry component loaded into the DOM by angular during the bootstrap process / application launch (<code>platformBrowserDynamic().bootstrapModule(AppModule)</code>) in <code>main.ts</code>. Each component contains metadata like <code>styles</code>, the <code>templateUrl</code> or <code><a href="/articles/angular-animations" target="_blank" rel="noopener noreferrer">animations</a></code>.',
+      },
+      {
+        type: 'HINT',
+        content:
+          'Components are the main building block for Angular applications.',
+      },
+      {
+        type: 'TEXT',
+        content:
+          'A component must belong to an NgModule in order for it to be available to another component or application. Components can be created with <code>ng generate component</code> or shortcut <code>ng g c</code> (Angular CLI needed) or manually. A angular component uses the <code>@Component</code> decorator, with the meta data (selector, templateUrl, ...) as arguments.',
+      },
+      {
+        type: 'SUBTITLE',
+        content: 'Component Files',
+      },
+      {
+        type: 'TABLE',
+        rows: [
+          {
+            type: 'default',
+            columns: [
+              { content: 'app.component.<b>ts</b>', align: 'left' },
+              {
+                content: 'TypeScript class that defines behavior / logic',
+                align: 'left',
+              },
+            ],
+          },
+          {
+            type: 'default',
+            columns: [
+              { content: 'app.component.<b>html</b>', align: 'left' },
+              {
+                content: 'Defines the HTML template / what renders on the page',
+                align: 'left',
+              },
+            ],
+          },
+          {
+            type: 'default',
+            columns: [
+              { content: 'app.component.<b>css</b>', align: 'left' },
+              {
+                content:
+                  'Defines the stylesheet (can be <code>css</code>, <code>scss</code> or <code>sass</code>)',
+                align: 'left',
+              },
+            ],
+          },
+          {
+            type: 'default',
+            columns: [
+              { content: 'app.component.<b>spec.ts</b>', align: 'left' },
+              { content: 'Defines a unit test for component', align: 'left' },
+            ],
+          },
+          {
+            type: 'default',
+            columns: [
+              { content: 'app.<b>module.ts</b>', align: 'left' },
+              {
+                content: 'The Module defines how to assemble the component',
+                align: 'left',
+              },
+            ],
+          },
+        ],
+      },
+      {
+        type: 'LINE',
+        content: '<hr/>',
+      },
+      {
+        type: 'LIST',
+        content: 'References:',
+        list: [
+          "Workspace and project file structure | 2022-08-07 | <a href='https://angular.io/guide/file-structure' target='_blank' rel='noopener noreferrer'>https://angular.io/guide/file-structure</a>",
+          "Angular Components Overview | 2022-08-07 | <a href='https://angular.io/guide/component-overview' target='_blank' rel='noopener noreferrer'>https://angular.io/guide/component-overview</a>",
+        ],
+      },
+    ],
+  },
+  {
     url: 'angular-animations',
     title: '@angular/animations',
     date: '2022-05-20',
     lastUpdate: '2022-07-29',
     elements: [
+      {
+        type: 'TEXT',
+        content:
+          "When you surf through the web, you'll often see some animated visually changes, for example when you hover over some elements with your mouse and the background color of that button changes a bit. Especially most of the social media & streaming platforms take advantage of animations, cause it's improves the <abbr title=\"\">UX</abbr> by drawing the user's attention to a certain part of the application for instance.",
+      },
       {
         type: 'TEXT',
         content:
@@ -34,7 +136,17 @@ export const testArticles: Array<Article> = [
       {
         type: 'TEXT',
         content:
-          "To trigger and select the proper HTML elements we need to add the animations directive <code><p <b>@myAnimation<b>></p></code> One benefit from @angular/animations is that you got your condition variable connected with the animation directly. You don’t have to set and remove css classes conditionally, then write some keyframes and styling in css. Just plain JavaScript and a HTML annotation in the related elements, either a attribute like <code>@slideIn</code> or a condition <code>[@slideIn]=\"onSuccess\"</code>. <a href='https://auth0.com/blog/get-better-angular-ux-using-animation-techniques/#Brief-Overview-of-Angular-Animations' target='_blank'>More information.",
+          'To trigger and select the proper HTML elements we need to add the animations directive <code>@slideIn</code> in component.html, related to the components.ts where we defined the animations.',
+      },
+      {
+        type: 'TEXT',
+        content:
+          'You can even trigger a animation through a condition variable connected with the animation directly <code>[@slideIn]="onSuccess"</code>. You don’t have to set and remove css classes conditionally, then write some keyframes and styling in css.',
+      },
+      {
+        type: 'TEXT',
+        content:
+          "For more information check the article from the auth0 team <a href='https://auth0.com/blog/get-better-angular-ux-using-animation-techniques/#Brief-Overview-of-Angular-Animations' target='_blank'>Brief Overview of Angular Animations</a>.",
       },
       {
         type: 'LINE',
@@ -70,7 +182,7 @@ export const testArticles: Array<Article> = [
       {
         type: 'TEXT',
         content:
-          'Add your animations to the components metadata, you even can add a host property to set the trigger tag on the component itself. The trigger name binds the animation to a specific element in the HTML Template, in this example the background-color of the component will change in 300ms. The transition event * => * ensures to execute the animation on every state change of earth.',
+          'Add your animations to the components metadata, you even can add a host property to set the trigger tag on the component itself. The trigger name binds the animation to a specific element in the HTML Template, in this example the background-color of the component will change in 300ms. The transition event <code>* => *</code> ensures to execute the animation on every state change of earth.',
       },
       // {
       //   type: 'CODE',
@@ -128,15 +240,55 @@ export const testArticles: Array<Article> = [
       {
         type: 'TEXT',
         content:
-          "Angular Material's theming system lets you customize colors and typography styles for your application. The theming system is based on <a href='https://material.io/design/material-theming/overview.html' target='_blank'>Google's Material Design specification</a>. Angular Material's theming API is built with Sass under-the-hood, where you work with color palettes instead of color values like rgb or hex. A palette is a collection of colors representing a portion of color space.",
-      },
-      {
-        type: 'TITLE',
-        content: 'Titel',
+          "Angular Material's theming system - based on <a href='https://material.io/design/material-theming/overview.html' target='_blank'>Google's Material Design specification</a> - lets you customize colors and typography styles for your application. Built with Sass under-the-hood, using color palettes instead of color values like rgb or hex to define theme colors. A palette is a collection of colors representing a portion of color space.",
       },
       {
         type: 'SUBTITLE',
-        content: 'Untertitel',
+        content: 'Typography',
+      },
+      {
+        type: 'TEXT',
+        content: '<h4 class="mat-display-4">mat-display-4</h4>',
+      },
+      {
+        type: 'TEXT',
+        content: '<h3 class="mat-display-3">mat-display-3</h3>',
+      },
+      {
+        type: 'TEXT',
+        content: '<h2 class="mat-display-2">mat-display-2</h2>',
+      },
+      {
+        type: 'TEXT',
+        content: '<h1 class="mat-display-1">mat-display-1</h1>',
+      },
+      {
+        type: 'TEXT',
+        content: '<h2 class="mat-headline">mat-headline</h2>',
+      },
+      {
+        type: 'TEXT',
+        content: '<h2 class="mat-title">mat-title</h2>',
+      },
+      {
+        type: 'TEXT',
+        content: '<h3 class="subheading-2">subheading-2</h3>',
+      },
+      {
+        type: 'TEXT',
+        content: '<h4 class="subheading-1">subheading-1</h4>',
+      },
+      {
+        type: 'TEXT',
+        content: '<p class="mat-body">mat-body</p>',
+      },
+      {
+        type: 'TEXT',
+        content: '<p class="mat-body-strong">mat-body-strong</p>',
+      },
+      {
+        type: 'TEXT',
+        content: '<p class="mat-small">mat-small</p>',
       },
       {
         type: 'LINE',

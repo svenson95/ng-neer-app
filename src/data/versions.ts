@@ -5,7 +5,7 @@ export const versions: Array<AngularVersion> = [
     title: 'AngularJS / Angular 1',
     date: '2010-10-20',
     description:
-      'Introduced as an open-source, JavaScript-based frontend framework. AngularJS lets you extend HTML vocabulary for your application. The resulting environment is extraordinarily expressive, readable, and quick to develop.',
+      'Introduced as an open-source JavaScript framework, which lets you extend HTML vocabulary for your application. The resulting environment is extraordinarily expressive, readable and quick to develop.',
     link: 'https://angularjs.org/',
     list: [
       'Based on a mix of <abbr title="Model-View-Controller">MVC</abbr> & <abbr title="Model-View-View-Model">MVVM</abbr> design',
@@ -170,7 +170,7 @@ export const versions: Array<AngularVersion> = [
     title: 'Angular 12',
     date: '2021-05-13',
     description:
-      "New cool features, more focused on open-source aspects with new contributor's guide, some Pull Requests from the community been added.",
+      "New features, more focused on open-source aspects with new contributor's guide, some Pull Requests from the community been added.",
     link: 'https://blog.angular.io/angular-v12-is-now-available-32ed51fbfd49',
     list: [
       'Moving closer to Ivy everywhere, View Engine is now deprecated',
@@ -190,7 +190,7 @@ export const versions: Array<AngularVersion> = [
   {
     title: 'Angular 13',
     date: '2021-11-03',
-    description: 'Expansion of Ivy-based features and optimizations',
+    description: 'Expansion of Ivy-based features and optimizations.',
     link: 'https://blog.angular.io/angular-v13-is-now-available-cce66f7bc296',
     list: [
       'View Engine is no longer available',
@@ -211,7 +211,7 @@ export const versions: Array<AngularVersion> = [
     title: 'Angular 14',
     date: '2022-06-02',
     description:
-      'From typed forms and standalone components to new primitives in the Angular <abbr title="Component Dev Kit">CDK</abbr>. This release includes many features and bug fixes directly contributed by community members, from adding router strong typing to more tree-shakable error messages.',
+      'This release includes many features and bug fixes directly contributed by community members.',
     link: 'https://blog.angular.io/angular-v14-is-now-available-391a6db736af',
     list: [
       'Simplifying Angular with Standalone Components (<abbr title="Not a stable API">developer preview</abbr>), reducing the need for <code>NgModule</code>\'s, imports directly in your <code>@Component()</code>',
