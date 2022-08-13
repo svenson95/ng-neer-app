@@ -32,11 +32,14 @@ const globalRippleConfig: RippleGlobalOptions = {
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule,
-    AppRoutingModule,
-    CoreModule,
-    AppIconComponent,
+
     MatButtonModule,
     MatTabsModule,
+
+    AppRoutingModule,
+
+    CoreModule,
+    AppIconComponent,
   ],
   providers: [
     { provide: MAT_RIPPLE_GLOBAL_OPTIONS, useValue: globalRippleConfig },

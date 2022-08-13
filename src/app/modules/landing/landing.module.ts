@@ -8,6 +8,6 @@ import { MatIconModule } from '@angular/material/icon';
 @NgModule({
   declarations: [LandingComponent],
   exports: [LandingComponent],
-  imports: [CommonModule, LandingRoutingModule, MatTreeModule, MatIconModule],
+  imports: [CommonModule, MatTreeModule, MatIconModule, LandingRoutingModule],
 })
 export class LandingModule {}
