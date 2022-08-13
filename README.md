@@ -2,11 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
 
+## External npm packages
+
+- _Angular Material_ (internationalized and accessible components) provide tools that help build own custom components with common interaction patterns.
+  - https://material.angular.io/
+- _tailwindcss_ (utility-first CSS framework) to define the most stylings. All used & available classes are listed in the official documentation.
+  - https://tailwindcss.com/docs/flex
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-Project use tailwind css (utility-first CSS framework) to define the most stylings. All used & available classes are listed in the official documentation https://tailwindcss.com/docs/flex.
 
 ## Code scaffolding
 
