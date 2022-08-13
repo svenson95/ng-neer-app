@@ -7,24 +7,7 @@ export const TREE_DATA: TopicNode[] = [
       { name: 'Angular CLI' },
       { name: 'Project Structure' },
       { name: 'NgModules' },
-      {
-        name: 'Components',
-        children: [
-          { name: 'Metadata' },
-          { name: 'Class' },
-          {
-            name: 'Template',
-            children: [
-              { name: 'Template Reference Variables' },
-              { name: 'Property Binding' },
-              { name: 'Interpolation' },
-              { name: 'Event Binding' },
-              { name: 'Two-way Binding' },
-            ],
-          },
-          { name: 'Style' },
-        ],
-      },
+      { name: '<a href="/articles/angular-core-components">Components</a>' },
       {
         name: 'Pipes',
         children: [{ name: 'Options' }],
@@ -130,8 +113,7 @@ export const TREE_DATA: TopicNode[] = [
         ],
       },
       {
-        name: 'Animations',
-        children: [{ name: '@angular/animations' }],
+        name: '<a href="/articles/angular-animations">Animations</a>',
       },
     ],
   },
@@ -139,7 +121,12 @@ export const TREE_DATA: TopicNode[] = [
     name: 'Ecosystem',
     children: [
       { name: 'State Management', children: [{ name: 'ngRx' }] },
-      { name: 'UI Library', children: [{ name: 'Angular Material' }] },
+      {
+        name: 'Angular Material',
+        children: [
+          { name: '<a href="/articles/angular-material-theming">Theming</a>' },
+        ],
+      },
       {
         name: 'Server-Side-Rendering',
         children: [{ name: 'Angular Universal' }],

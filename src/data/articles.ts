@@ -24,7 +24,7 @@ export const testArticles: Array<Article> = [
       {
         type: 'CODE',
         content:
-          "@Component({\n  selector: 'app-title',\n  templateUrl: './title.component.html',\n  styleUrls: ['./title.component.css'],\n  standalone: true,\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class AppTitleComponent {}",
+          "@Component({\n  selector: 'app-title',\n  templateUrl: './title.component.html',\n  // template: `<h1>My App</h1>`,\n  styleUrls: ['./title.component.css'],\n  // standalone: true,\n  // changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class TitleComponent {}",
       },
       {
         type: 'TEXT',
@@ -97,6 +97,11 @@ export const testArticles: Array<Article> = [
             ],
           },
         ],
+      },
+      {
+        type: 'TEXT',
+        content:
+          'Metadata, Property Binding, Template: Reference Variables, Interpolation, Event Binding, Two-way Binding',
       },
       {
         type: 'LINE',
