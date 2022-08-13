@@ -19,7 +19,7 @@ ngnr-history {
     }
 
     ul {
-      @apply mt-2;
+      @apply overflow-x-auto mt-2;
     }
   }
 }

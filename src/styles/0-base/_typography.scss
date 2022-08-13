@@ -16,16 +16,10 @@ body {
 }
 
 a {
-  @apply no-underline;
-}
-
-p,
-li {
-  code {
-    @apply p-1 rounded-md;
-  }
+  @apply no-underline break-words;
 }
 
 code {
+  @apply mx-[2px] p-1 rounded-md;
   white-space: nowrap;
 }
