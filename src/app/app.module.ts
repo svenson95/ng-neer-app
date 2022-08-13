@@ -16,6 +16,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 import { RouterModule, TitleStrategy } from '@angular/router';
 import { PageTitleStrategy } from './core/shared/page.title-strategy';
+import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 
 const globalRippleConfig: RippleGlobalOptions = {
   animation: {
@@ -42,6 +43,16 @@ const globalRippleConfig: RippleGlobalOptions = {
     STORAGE_PROVIDERS,
     { provide: WindowToken, useFactory: windowProvider },
     { provide: TitleStrategy, useClass: PageTitleStrategy },
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        coreLibraryLoader: () => import('highlight.js/lib/core'),
+        languages: {
+          typescript: () => import('highlight.js/lib/languages/typescript'),
+          css: () => import('highlight.js/lib/languages/css'),
+        },
+      },
+    },
   ],
   bootstrap: [AppComponent],
 })

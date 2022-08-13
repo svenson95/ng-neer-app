@@ -22,6 +22,11 @@ export const testArticles: Array<Article> = [
           'Architectural patterns like <abbr title="Model-View-View-Model">MVVM</abbr> and <abbr title="Model-View-Controller">MVC</abbr> describcing the way, how the different files (logic, template, style) of a component working together to keep changes between the view (template) and the state (logic) in sync. A lot of people on StackOverFlow say that angular is neither MVVC or MVC, it\'s more like a <i>component-based</i> architecture.',
       },
       {
+        type: 'CODE',
+        content:
+          "@Component({\n  selector: 'app-title',\n  templateUrl: './title.component.html',\n  styleUrls: ['./title.component.css'],\n  standalone: true,\n  changeDetection: ChangeDetectionStrategy.OnPush\n})\nexport class AppTitleComponent {}",
+      },
+      {
         type: 'TEXT',
         content:
           'Angular applications consists at least of one component, the <code>AppComponent</code> as the entry component loaded into the DOM by angular during the bootstrap process / application launch (<code>platformBrowserDynamic().bootstrapModule(AppModule)</code>) in <code>main.ts</code>. Each component contains metadata like <code>styles</code>, the <code>templateUrl</code> or <code><a href="/articles/angular-animations" target="_blank" rel="noopener noreferrer">animations</a></code>.',

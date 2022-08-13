@@ -195,7 +195,7 @@
     element.type === ElementType.CODE && (element.hidden ? isVisible : true)
   "
 >
-  <!-- <code class="w-full p-5 border-2 border-solid" [highlight]="element.content" [ngClass]="'language-' + element.language"></code> -->
+  <code class="w-full whitespace-pre" [highlight]="element.content ?? null" [ngClass]="'language-' + element.language"></code>
 </pre>
 
 <!-- ANSWER-GROUP -->

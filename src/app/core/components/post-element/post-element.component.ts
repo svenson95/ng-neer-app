@@ -10,12 +10,18 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { PostElement, SublistItem } from '../../models/post/element';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { PostElementType } from '../../models/post/element-type';
+import { HighlightModule } from 'ngx-highlightjs';
 
 @Component({
   selector: 'ngnr-post-element',
   templateUrl: './post-element.component.html',
   standalone: true,
-  imports: [CommonModule, MatProgressSpinnerModule, PostElementComponent],
+  imports: [
+    CommonModule,
+    MatProgressSpinnerModule,
+    HighlightModule,
+    PostElementComponent,
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PostElementComponent implements OnInit {
