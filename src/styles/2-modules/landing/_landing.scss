@@ -1,12 +1,30 @@
 @use "../../constants";
 
 ngnr-landing {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
+  @apply flex flex-col gap-12 mt-[-3rem];
+
+  .mat-tab-labels {
+    @apply justify-center;
+
+    .mat-tab-label {
+      @apply h-[32px];
+
+      &.mat-tab-label-active {
+        opacity: 1;
+      }
+
+      &:not(:last-of-type) {
+        border-right: 1px solid rgb(170, 170, 170);
+      }
+    }
+  }
+
+  .mat-tab-body-content {
+    overflow: visible !important;
+  }
 
   mat-tree.neer-tree {
-    background: transparent;
+    @apply bg-transparent py-10;
 
     .example-tree-invisible {
       display: none;
