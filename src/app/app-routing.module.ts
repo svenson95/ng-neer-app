@@ -5,9 +5,8 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    data: { animation: 'LandingPage' },
     loadChildren: () =>
-      import('./modules/landing/landing.module').then((m) => m.LandingModule),
+      import('./modules/start/start.module').then((m) => m.StartModule),
   },
   {
     path: 'articles',

@@ -13,10 +13,10 @@ interface TreeData {
   data: MatTreeNestedDataSource<TopicNode>;
 }
 @Component({
-  selector: 'ngnr-landing',
-  templateUrl: './landing.component.html',
+  selector: 'ngnr-start',
+  templateUrl: './start.component.html',
 })
-export class LandingComponent {
+export class StartComponent {
   fundamentals: TreeData = this.setTreeData(FUNDAMENTALS_DATA);
   advanced: TreeData = this.setTreeData(ADVANCED_DATA);
   ecosystem: TreeData = this.setTreeData(ECOSYSTEM_DATA);

@@ -33,7 +33,6 @@ const globalRippleConfig: RippleGlobalOptions = {
     BrowserAnimationsModule,
     RouterModule,
 
-    MatButtonModule,
     MatTabsModule,
 
     AppRoutingModule,

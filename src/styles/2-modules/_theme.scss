@@ -1,9 +1,9 @@
 @use "articles/articles-theme";
 @use "history/history-theme";
-@use "landing/landing-theme";
+@use "start/start-theme";
 
 @mixin theme($theme) {
   @include articles-theme.theme($theme);
   @include history-theme.theme($theme);
-  @include landing-theme.theme($theme);
+  @include start-theme.theme($theme);
 }
