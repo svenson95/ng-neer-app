@@ -34,11 +34,11 @@
   </a>
 
   <small
-    class="mat-small mb-3"
+    class="mat-small mb-3 opacity-50"
     [class.opacity-0]="isLoading"
     *ngIf="!isLoading; else spinner"
   >
-    Angular docs journey
+    Angular docs extension
   </small>
   <ng-template #spinner>
     <mat-spinner class="mb-3" diameter="20"></mat-spinner>
