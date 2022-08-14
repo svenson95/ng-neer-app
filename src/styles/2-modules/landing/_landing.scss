@@ -3,48 +3,57 @@
 ngnr-landing {
   @apply flex flex-col gap-12 mt-[-3rem];
 
-  .mat-tab-labels {
-    @apply justify-center;
+  mat-tab-group {
+    .mat-tab-header {
+      position: sticky;
+      top: constants.$neer-tab-bar-height + 1px;
+      z-index: 8;
+      @apply mx-[-1.25rem];
 
-    .mat-tab-label {
-      @apply h-[32px];
+      .mat-tab-labels {
+        @apply justify-center;
 
-      &.mat-tab-label-active {
-        opacity: 1;
-      }
+        .mat-tab-label {
+          height: constants.$neer-tab-bar-height;
+          @apply text-xs;
 
-      &:not(:last-of-type) {
-        border-right: 1px solid rgb(170, 170, 170);
+          &.mat-tab-label-active {
+            opacity: 1;
+          }
+
+          &:not(:last-of-type) {
+            border-right-width: 1px;
+          }
+        }
       }
     }
-  }
 
-  .mat-tab-body-content {
-    overflow: visible !important;
+    .mat-tab-body-content {
+      overflow: visible !important;
+    }
   }
 
   mat-tree.neer-tree {
     @apply bg-transparent py-10;
 
     .example-tree-invisible {
-      display: none;
+      @apply hidden;
+    }
+
+    /* Padding for leaf nodes. */
+    mat-tree-node:not(.mat-nested-tree-node) {
+      @apply pl-6;
+    }
+    .mat-nested-tree-node div[role="group"] {
+      @apply pl-5;
     }
 
     mat-icon {
-      display: flex;
+      @apply flex;
     }
 
-    .mat-nested-tree-node div[role="group"] {
-      padding-left: 20px;
-    }
-
-    /*
-     * Padding for leaf nodes.
-     * Leaf nodes need to have padding so as to align with other non-leaf nodes
-     * under the same parent.
-     */
-    div[role="group"] > .mat-tree-node {
-      padding-left: 20px;
+    .mat-tree-node {
+      border-bottom-width: 1px;
     }
   }
 }

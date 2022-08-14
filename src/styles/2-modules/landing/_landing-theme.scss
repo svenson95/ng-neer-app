@@ -3,4 +3,20 @@
 
 @mixin theme($theme) {
   $is-dark-theme: map.get($theme, is-dark);
+
+  mat-tab-group .mat-tab-header {
+    background-color: if(
+      $is-dark-theme,
+      constants.$neer-font-color-2-light,
+      constants.$neer-font-color-2-dark
+    );
+  }
+
+  mat-tree.neer-tree .mat-tree-node {
+    border-bottom-color: if(
+      $is-dark-theme,
+      rgba(constants.$neer-font-color-3-light, 0.5),
+      rgba(constants.$neer-font-color-3-dark, 0.5)
+    );
+  }
 }

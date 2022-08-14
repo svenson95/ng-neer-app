@@ -69,7 +69,7 @@
     }
 
     /* Code */
-    code {
+    pre code {
       background: if(
         $is-dark-theme,
         constants.$neer-font-color-1-light,
@@ -83,6 +83,10 @@
 
       &::-webkit-scrollbar-thumb {
         background: constants.$neer-color-tertiary;
+      }
+
+      &.hljs {
+        @apply py-5 px-7;
       }
 
       .dark,
@@ -141,8 +145,8 @@
       td {
         border-color: if(
           $is-dark-theme,
-          constants.$neer-font-color-1-light,
-          constants.$neer-font-color-1-dark
+          rgba(constants.$neer-font-color-3-light, 0.4),
+          rgba(constants.$neer-font-color-3-dark, 0.4)
         );
       }
     }

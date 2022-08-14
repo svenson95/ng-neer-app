@@ -16,8 +16,8 @@
     small {
       color: if(
         $is-dark-theme,
-        constants.$neer-font-color-3-dark,
-        constants.$neer-font-color-3-light
+        constants.$neer-font-color-2-dark,
+        constants.$neer-font-color-2-light
       );
     }
   }

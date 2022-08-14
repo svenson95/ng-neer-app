@@ -1,7 +1,7 @@
 @use "../../constants";
 
 hr {
-  @apply my-10 border-none;
+  @apply my-5 border-none;
 
   &.vertical {
     @apply h-full;

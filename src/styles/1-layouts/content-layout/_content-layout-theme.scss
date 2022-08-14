@@ -16,4 +16,14 @@
   .mat-button-focus-overlay {
     background: lightgray;
   }
+
+  mat-tab-group .mat-tab-labels {
+    .mat-tab-label:not(:last-of-type) {
+      border-right-color: if(
+        $is-dark-theme,
+        rgb(110, 110, 110),
+        rgb(170, 170, 170)
+      );
+    }
+  }
 }

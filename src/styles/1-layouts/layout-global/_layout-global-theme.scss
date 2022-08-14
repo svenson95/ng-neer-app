@@ -46,7 +46,7 @@
 
       .mat-tab-links {
         .mat-tab-link {
-          height: 32px;
+          height: constants.$neer-tab-bar-height;
 
           &.mat-tab-label-active {
             opacity: 1;
