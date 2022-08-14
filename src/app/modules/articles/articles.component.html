@@ -1,25 +1,3 @@
-<!-- Upcoming articles -->
-<h1>Upcoming articles</h1>
-<ul>
-  <li><code>@Input</code>'s/<code>@Output</code>'s</li>
-  <li>
-    Services, class with a well-defined purpose, Angular distinguishes
-    components from services to increase modularity and reusability.
-  </li>
-  <li>Pipes, pure function by default, for recurring tasks</li>
-  <li>Directives, logic binding for html elements</li>
-  <li>Preloading Strategy</li>
-  <li>Routing & guards</li>
-  <li>Lifecycle hooks</li>
-  <li>Folder structure best practices</li>
-  <li>Observables, rxjs (Subjects), state-management with rxjs</li>
-  <li>Performance: Change Detection & angulars devtools plugin</li>
-  <li>Server-Side-Rendering (SSR) with Angular Universal</li>
-  <li>Unit and integration tests to improve maintainability</li>
-</ul>
-
-<hr class="horizontal" />
-
 <ul class="list-none flex flex-col p-0 gap-5">
   <li *ngFor="let article of articles">
     <a class="flex flex-col p-5 no-underline gap-2" [routerLink]="article.url">

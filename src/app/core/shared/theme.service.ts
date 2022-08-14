@@ -1,6 +1,5 @@
 import { DOCUMENT } from '@angular/common';
 import { Inject, Injectable } from '@angular/core';
-import { elementAt } from 'rxjs';
 
 import { LocalStorage } from './storage.service';
 

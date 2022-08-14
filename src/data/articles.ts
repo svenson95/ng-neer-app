@@ -101,7 +101,7 @@ export const testArticles: Array<Article> = [
       {
         type: 'TEXT',
         content:
-          'Metadata, Property Binding, Template: Reference Variables, Interpolation, Event Binding, Two-way Binding',
+          "Metadata, Property Binding (<code>@Input</code>'s/<code>@Output</code>'s), Template: Reference Variables, Interpolation, Event Binding, Two-way Binding",
       },
       {
         type: 'LINE',
@@ -113,6 +113,79 @@ export const testArticles: Array<Article> = [
         list: [
           "Workspace and project file structure | 2022-08-07 | <a href='https://angular.io/guide/file-structure' target='_blank' rel='noopener noreferrer'>https://angular.io/guide/file-structure</a>",
           "Angular Components Overview | 2022-08-07 | <a href='https://angular.io/guide/component-overview' target='_blank' rel='noopener noreferrer'>https://angular.io/guide/component-overview</a>",
+        ],
+      },
+    ],
+  },
+  {
+    url: 'angular-core-modules',
+    title: '@angular/core | NgModules',
+    date: '2022-08-14',
+    lastUpdate: '2022-08-15',
+    elements: [
+      {
+        type: 'TEXT',
+        content:
+          'Modules are a great way to organize an application and extend it with capabilities from external libraries. NgModules consolidate components, directives, and pipes into cohesive blocks of functionality, each focused on a feature area, application business domain, workflow, or common collection of utilities.',
+      },
+      {
+        type: 'HINT',
+        content:
+          'NgModules configure the injector and the compiler and help organize related things together.',
+      },
+      {
+        type: 'CODE',
+        content:
+          '@NgModule({\n  declarations: [\n    AppComponent\n  ],\n  imports: [ /* add modules here so Angular knows to use them */\n    BrowserModule,\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule {}',
+      },
+      {
+        type: 'TEXT',
+        content: 'Preloading Strategy.',
+      },
+      {
+        type: 'LINE',
+        content: '<hr/>',
+      },
+      {
+        type: 'LIST',
+        content: 'References:',
+        list: [
+          "NgModules | 2022-08-14 | <a href='https://angular.io/guide/ngmodules' target='_blank' rel='noopener noreferrer'>https://angular.io/guide/ngmodules</a>",
+          "NgModule | 2022-08-14 | <a href='https://angular.io/api/core/NgModule' target='_blank' rel='noopener noreferrer'>https://angular.io/api/core/NgModule</a>",
+        ],
+      },
+    ],
+  },
+  {
+    url: 'angular-core-injectable-services',
+    title: '@angular/core | Injectable Services',
+    date: '2022-08-14',
+    lastUpdate: '2022-08-15',
+    elements: [
+      {
+        type: 'TEXT',
+        content:
+          'Services in Angular let you define states & methods that are accessible to either your whole application (<code>root</code>) or to an specific part / module - like a admin panel - of your application.',
+      },
+      {
+        type: 'CODE',
+        content:
+          "@Injectable({\n  providedIn: 'root'\n  // providedIn: AdminModule\n})\nexport class ThemeService {}",
+      },
+      {
+        type: 'TEXT',
+        content:
+          'Dependency Injection & Providing Services. HTTP Requests. Class with a well-defined purpose, Angular distinguishes components from services to increase modularity and reusability.',
+      },
+      {
+        type: 'LINE',
+        content: '<hr/>',
+      },
+      {
+        type: 'LIST',
+        content: 'References:',
+        list: [
+          "title | 2022-08-30 | <a href='https://angular.io/guide/file-structure' target='_blank' rel='noopener noreferrer'>https://angular.io/guide/file-structure</a>",
         ],
       },
     ],

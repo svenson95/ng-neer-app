@@ -4,13 +4,18 @@ export const TREE_DATA: TopicNode[] = [
   {
     name: 'Fundamentals',
     children: [
+      { name: 'Basics (Rendering & Change Detection, how Data-binding works)' },
       { name: 'Angular CLI' },
-      { name: 'Project Structure' },
+      { name: 'Project / Folder Structure' },
       { name: 'NgModules' },
       { name: '<a href="/articles/angular-core-components">Components</a>' },
+      { name: '<a href="/articles/angular-core-modules">Modules</a>' },
       {
         name: 'Pipes',
-        children: [{ name: 'Options' }],
+        children: [
+          { name: 'Options' },
+          { name: 'Pure function by default, for recurring tasks' },
+        ],
       },
       {
         name: 'Directives',
@@ -18,8 +23,14 @@ export const TREE_DATA: TopicNode[] = [
           {
             name: 'Component',
             children: [
-              { name: 'Class Binding' },
-              { name: 'Style Binding' },
+              { name: 'logic binding for html elements' },
+              {
+                name: 'Class Binding [class.is-selected]="element.isSelected"',
+              },
+              { name: 'Attribute Binding [attr.colspan]="tableItem.colSpan"' },
+              {
+                name: 'Style Binding [style.background-color]="\'red\'"',
+              },
               {
                 name: 'Interaction',
                 children: [
@@ -41,11 +52,7 @@ export const TREE_DATA: TopicNode[] = [
         ],
       },
       {
-        name: 'Services',
-        children: [
-          { name: 'HTTP Requests' },
-          { name: 'Dependency Injection & Providing Services' },
-        ],
+        name: '<a href="/articles/angular-core-injectable-services">Services</a>',
       },
       {
         name: 'Routing',
@@ -84,7 +91,7 @@ export const TREE_DATA: TopicNode[] = [
           { name: 'Subscribing to Observables' },
           { name: 'Executing Observables' },
           { name: 'Disposing Observables' },
-          { name: 'Operators' },
+          { name: 'rxjs (Subjects), state-management with rxjs' },
         ],
       },
       {
@@ -128,12 +135,16 @@ export const TREE_DATA: TopicNode[] = [
         ],
       },
       {
-        name: 'Server-Side-Rendering',
+        name: 'Server-Side-Rendering (SSR)',
         children: [{ name: 'Angular Universal' }],
       },
       {
         name: 'Testing',
-        children: [{ name: 'Jasmine & Karma' }, { name: 'Protractor' }],
+        children: [
+          { name: 'Unit and integration tests' },
+          { name: 'Jasmine & Karma' },
+          { name: 'Protractor' },
+        ],
       },
       {
         name: 'Miscellaneous',
@@ -141,6 +152,7 @@ export const TREE_DATA: TopicNode[] = [
           { name: 'i18n' },
           { name: 'Accessibility' },
           { name: 'Linting (ESLint)' },
+          { name: 'angulars devtools plugin' },
         ],
       },
     ],
