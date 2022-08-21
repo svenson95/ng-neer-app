@@ -8,7 +8,6 @@ ngnr-start {
       position: sticky;
       top: constants.$neer-tab-bar-height + 1px;
       z-index: 8;
-      @apply mx-[-1.25rem];
 
       .mat-tab-labels {
         @apply justify-center;

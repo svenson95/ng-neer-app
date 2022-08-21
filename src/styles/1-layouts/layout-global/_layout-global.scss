@@ -13,6 +13,8 @@ body {
 }
 
 main.content {
+  @apply px-4;
+
   .mat-tab-links {
     justify-content: center;
 
@@ -38,4 +40,9 @@ main.content {
     position: sticky;
     z-index: 4;
   }
+}
+
+nav .mat-tab-link,
+ngnr-start mat-tab-group .mat-tab-label {
+  @apply flex-1 lg:flex-none;
 }
