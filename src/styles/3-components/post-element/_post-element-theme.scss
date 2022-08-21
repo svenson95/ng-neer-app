@@ -84,33 +84,6 @@
       &::-webkit-scrollbar-thumb {
         background: constants.$neer-color-tertiary;
       }
-
-      &.hljs {
-        @apply py-5 px-7;
-      }
-
-      .dark,
-      .light {
-        .hljs-title {
-          color: #5491fe;
-        }
-      }
-
-      .light {
-        .hljs-keyword {
-          color: #9f00a9;
-        }
-      }
-
-      .dark {
-        .hljs-keyword {
-          color: #f000ff;
-        }
-
-        .hljs-title {
-          color: #5491fe;
-        }
-      }
     }
   }
 
