@@ -113,6 +113,12 @@ ngnr-post-element {
 
   /* CODE */
   pre code {
+    line-height: 24px;
+
+    &.hljs {
+      @apply px-5;
+    }
+
     &::-webkit-scrollbar {
       height: constants.$neer-scrollbar-width;
       overflow-y: scroll;
