@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ArticlesComponent } from './articles.component';
 import { ArticlesRoutingModule } from './articles-routing.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [ArticlesComponent],
   exports: [ArticlesComponent],
-  imports: [CommonModule, ArticlesRoutingModule],
+  imports: [CommonModule, RouterModule, ArticlesRoutingModule],
 })
 export class ArticlesModule {}
