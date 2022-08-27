@@ -1,4 +1,4 @@
-import { Article } from './articles';
+import { Article } from '.';
 
 export const ANGULAR_ANIMATIONS: Article = {
   url: 'angular-animations',

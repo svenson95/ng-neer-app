@@ -1,4 +1,4 @@
-import { Article } from './articles';
+import { Article } from '.';
 
 export const ANGULAR_CORE_MODULES: Article = {
   url: 'angular-core-ngmodules',

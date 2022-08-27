@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Article, testArticles } from 'src/data/articles';
+import { Article, TEST_ARTICLES } from 'src/data/articles';
 
 @Component({
   selector: 'ngnr-article',
@@ -12,7 +12,7 @@ export class ArticleComponent implements OnInit {
   constructor(private router: Router) {
     const url = this.router.url;
     const articleUrl = url.substring(url.indexOf('/', 2) + 1, url.length);
-    const article = testArticles.find((el) => articleUrl === el.url);
+    const article = TEST_ARTICLES.find((el) => articleUrl === el.url);
     if (article) {
       this.article = article;
     }

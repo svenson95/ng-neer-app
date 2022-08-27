@@ -1,12 +1,13 @@
 import { TopicNode } from 'src/app/core/models/angular-tree';
 
 export const FUNDAMENTALS_DATA: TopicNode[] = [
-  { name: 'Basics (Rendering & Change Detection, how Data-binding works)' },
+  {
+    name: '<a href="/articles/introduction-and-basics">Introduction & Basics</a>',
+  },
   { name: 'Angular CLI' },
   { name: 'Project / Folder Structure' },
-  { name: 'NgModules' },
   { name: '<a href="/articles/angular-core-components">Components</a>' },
-  { name: '<a href="/articles/angular-core-modules">Modules</a>' },
+  { name: '<a href="/articles/angular-core-ngmodules">NgModules</a>' },
   {
     name: 'Pipes',
     children: [
@@ -86,7 +87,7 @@ export const ADVANCED_DATA: TopicNode[] = [
       { name: 'Subscribing to Observables' },
       { name: 'Executing Observables' },
       { name: 'Disposing Observables' },
-      { name: 'rxjs (Subjects), state-management with rxjs' },
+      { name: 'rxjs (Subjects)' },
     ],
   },
   {
@@ -117,6 +118,13 @@ export const ADVANCED_DATA: TopicNode[] = [
   {
     name: '<a href="/articles/angular-animations">Animations</a>',
   },
+  {
+    name: 'Server-Side-Rendering (SSR)',
+    children: [{ name: 'Angular Universal' }],
+  },
+  { name: 'Internationalization (i18n)' },
+  { name: 'Accessibility' },
+  { name: 'Unit and integration tests' },
 ];
 
 export const ECOSYSTEM_DATA: TopicNode[] = [
@@ -125,27 +133,25 @@ export const ECOSYSTEM_DATA: TopicNode[] = [
     name: 'Angular Material',
     children: [
       { name: '<a href="/articles/angular-material-theming">Theming</a>' },
+      {
+        name: 'Components',
+        children: [
+          {
+            name: '<a href="/articles/angular-material-components-stepper">mat-stepper</a>',
+          },
+        ],
+      },
     ],
-  },
-  {
-    name: 'Server-Side-Rendering (SSR)',
-    children: [{ name: 'Angular Universal' }],
   },
   {
     name: 'Testing',
-    children: [
-      { name: 'Unit and integration tests' },
-      { name: 'Jasmine & Karma' },
-      { name: 'Protractor' },
-    ],
+    children: [{ name: 'Jasmine & Karma' }, { name: 'Protractor' }],
   },
   {
     name: 'Miscellaneous',
     children: [
-      { name: 'i18n' },
-      { name: 'Accessibility' },
       { name: 'Linting (ESLint)' },
-      { name: 'angulars devtools plugin' },
+      { name: "Angular's chrome dev tools plugin" },
     ],
   },
 ];

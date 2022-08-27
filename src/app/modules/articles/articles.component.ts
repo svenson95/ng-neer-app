@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { testArticles } from 'src/data/articles';
+import { TEST_ARTICLES } from 'src/data/articles';
 
 @Component({
   selector: 'ngnr-articles',
   templateUrl: './articles.component.html',
 })
 export class ArticlesComponent implements OnInit {
-  public articles = testArticles;
+  public articles = TEST_ARTICLES;
 
   constructor() {}
 
