@@ -11,6 +11,20 @@
         constants.$neer-font-color-1-light,
         constants.$neer-font-color-1-dark
       );
+      $shadowTransition: transform 150ms ease-in-out, box-shadow 150ms ease-in-out, background-color 150ms ease-in-out;
+      transition: $shadowTransition;
+
+      &:hover {
+        background-color: if(
+            $is-dark-theme,
+            black,
+            white
+        );
+
+        box-shadow: constants.$neer-shadow-grey;
+        transform: translateY(-2px);
+        transition: $shadowTransition;
+      }
 
       > div small {
         color: if(
