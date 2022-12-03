@@ -7,9 +7,26 @@ export const ANGULAR_CORE_SERVICES: Article = {
   lastUpdate: '2022-08-27',
   elements: [
     {
+      type: 'TITLE',
+      content: 'Introduction',
+    },
+    {
       type: 'TEXT',
       content:
-        'Services in Angular let you define states & methods that are accessible to either your whole application (<code>root</code>) or to an specific part / module - like a admin panel - of your application.',
+        'Services can include logic that is accessible either to the whole application (<code>root</code>) or to an specific part (module) - like a admin panel. Often services are used to provide API request methods.',
+    },
+    {
+      type: 'LINE',
+      content: '<hr/>',
+    },
+    {
+      type: 'SUBTITLE',
+      content: 'Requirements',
+    },
+    {
+      type: 'TEXT',
+      content:
+        "<code>Injectable</code> is part of the <code>@angular/core</code> package.",
     },
     {
       type: 'LINE',
@@ -20,9 +37,22 @@ export const ANGULAR_CORE_SERVICES: Article = {
       content: 'Syntax',
     },
     {
+      type: 'TEXT',
+      content: "Service's can either be <code>providedIn</code> root.",
+    },
+    {
       type: 'CODE',
       content:
-        "@Injectable({\n  providedIn: 'root'\n  // providedIn: AdminModule\n})\nexport class ThemeService {}",
+        "@Injectable({\n  providedIn: 'root'})\nexport class MyService {}",
+    },
+    {
+      type: 'TEXT',
+      content: "Or been provided in certain modules.",
+    },
+    {
+      type: 'CODE',
+      content:
+        "@Injectable({\n  providedIn: AdminModule\n})\nexport class MyService {}",
     },
     {
       type: 'LINE',

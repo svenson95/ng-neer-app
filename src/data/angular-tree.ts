@@ -2,7 +2,7 @@ import { TopicNode } from 'src/app/core/models/angular-tree';
 
 export const FUNDAMENTALS_DATA: TopicNode[] = [
   {
-    name: '<a href="/articles/introduction-and-basics">Introduction & Basics</a>',
+    name: '<a href="/articles/get-started-with-angular">Get started with Angular</a>',
   },
   { name: 'Angular CLI' },
   { name: 'Project / Folder Structure' },

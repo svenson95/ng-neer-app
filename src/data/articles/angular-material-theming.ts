@@ -7,9 +7,45 @@ export const ANGULAR_MATERIAL_THEMING: Article = {
   lastUpdate: '2022-08-29',
   elements: [
     {
+      type: 'SUBTITLE',
+      content: 'Introduction',
+    },
+    {
       type: 'TEXT',
       content:
-        "Angular Material's theming system - based on <a href='https://material.io/design/material-theming/overview.html' target='_blank'>Google's Material Design specification</a> - lets you customize colors and typography styles for your application. Built with Sass under-the-hood, using color palettes instead of color values like rgb or hex to define theme colors. A palette is a collection of colors representing a portion of color space.",
+        "Angular Material's theming - based on <a href='https://material.io/design/material-theming/overview.html' target='_blank'>Google's Material Design specification</a> - provides the ability to systematically customize your design specification like font-families, sizes & colors.",
+    },
+    {
+      type: 'HINT',
+      content:
+        "Material Theming refers to the customization of your Material Design app to better reflect your product’s brand.",
+    },
+    {
+      type: 'TEXT',
+      content:
+        "When you begin changing aspects of your UI, such as color and typography, Material Theming tools apply your design vision throughout your whole application.",
+    },
+    {
+      type: 'HINT',
+      content:
+        "Built with Sass under-the-hood.",
+    },
+    {
+      type: 'LINE',
+      content: '<hr/>',
+    },
+    {
+      type: 'SUBTITLE',
+      content: 'Requirements',
+    },
+    {
+      type: 'TEXT',
+      content:
+        "Add angular material with <code>ng add @angular/material</code>.",
+    },
+    {
+      type: 'LINE',
+      content: '<hr/>',
     },
     {
       type: 'SUBTITLE',

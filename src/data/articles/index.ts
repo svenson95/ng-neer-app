@@ -4,7 +4,7 @@ export { ANGULAR_CORE_MODULES } from './angular-core-modules';
 export { ANGULAR_CORE_SERVICES } from './angular-core-services';
 export { ANGULAR_MATERIAL_COMPONENTS_STEPPER } from './angular-material-components-stepper';
 export { ANGULAR_MATERIAL_THEMING } from './angular-material-theming';
-export { INTRODUCTION_AND_BASICS } from './introduction-and-basics';
+export { INTRODUCTION_AND_BASICS } from './get-started-with-angular';
 
 import { PostElement } from 'src/app/core/models/post/element';
 import {

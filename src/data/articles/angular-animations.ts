@@ -7,19 +7,28 @@ export const ANGULAR_ANIMATIONS: Article = {
   lastUpdate: '2022-07-29',
   elements: [
     {
+      type: 'SUBTITLE',
+      content: 'Introduction',
+    },
+    {
       type: 'TEXT',
       content:
-        "When you surf through the web, you'll often see some animated visually changes, for example when you hover a button and the background color of that button changes. Nowadays a lot of applications take advantage of animations, cause it's improves the <abbr title=\"\">UX</abbr> by drawing the user's attention to a certain part of the application for instance.",
+        "Angular's built-in animations builder provides methods to define web animation sequences, especially useful to build complex animations with multiple transitions.",
+    },
+    {
+      type: 'TEXT',
+      content:
+        'Motion is scientifically proven to attract attention, animations during a interactive process can improve the usability and user experience - by drawing the user\'s attention to a certain part of the application for instance.',
     },
     {
       type: 'HINT',
       content:
-        'Motion is scientifically proven to attract attention, animations during a interactive process can improve the usability and user experience.',
+        'Well-designed animations can make your application feel more straightforward to use',
     },
     {
       type: 'TEXT',
       content:
-        'Angular has a built-in animations builder, providing methods for defining web animation sequences, especially for complex animations with multiple transitions. Well-designed animations can make your application feel more straightforward to use.',
+        '@angular/animations uses the Web Animations API and CSS as a fallback. You\'ll find an interesting discussion on StackOverFlow about <a href="https://stackoverflow.com/questions/49628726/what-is-the-purpose-of-angular-animations" target="_blank">the purpose of the Angular animations system compared to CSS animations</a>.',
     },
     {
       type: 'LINE',
@@ -27,44 +36,7 @@ export const ANGULAR_ANIMATIONS: Article = {
     },
     {
       type: 'SUBTITLE',
-      content: 'Syntax',
-    },
-    {
-      type: 'CODE',
-      content:
-        '@Component({\n  ...\n  animations: [...]\n})\nexport class TitleComponent {}',
-    },
-    {
-      type: 'LINE',
-      content: '<hr/>',
-    },
-    {
-      type: 'TEXT',
-      content:
-        '@angular/animations uses the Web Animations API and CSS as a fallback, so why should we use this library? In the end it\'s a question about your own preference and the animation you want to create. It is a choice between using JavaScript or CSS for defining animations, you\'ll find an interesting discussion on StackOverFlow about <a href="https://stackoverflow.com/questions/49628726/what-is-the-purpose-of-angular-animations" target="_blank">the purpose of the Angular animations system compared to CSS animations</a>.',
-    },
-    {
-      type: 'TEXT',
-      content:
-        'To trigger and select the proper HTML elements we need to add the animations directive <code>@slideIn</code> in component.html, related to the components.ts where we defined the animations.',
-    },
-    {
-      type: 'TEXT',
-      content:
-        'You can even trigger a animation through a condition variable connected with the animation directly <code>[@slideIn]="onSuccess"</code>. You don’t have to set and remove css classes conditionally, then write some keyframes and styling in css.',
-    },
-    {
-      type: 'TEXT',
-      content:
-        "For more information check the article from the auth0 team <a href='https://auth0.com/blog/get-better-angular-ux-using-animation-techniques/#Brief-Overview-of-Angular-Animations' target='_blank'>Brief Overview of Angular Animations</a>.",
-    },
-    {
-      type: 'LINE',
-      content: '<hr/>',
-    },
-    {
-      type: 'SUBTITLE',
-      content: 'Dependencies',
+      content: 'Requirements',
     },
     {
       type: 'TEXT',
@@ -80,6 +52,39 @@ export const ANGULAR_ANIMATIONS: Article = {
       type: 'TEXT',
       content:
         '<code>@angular/animations/browser/testing</code> <br/> Provides infrastructure for testing of the Animations browser subsystem.',
+    },
+    {
+      type: 'LINE',
+      content: '<hr/>',
+    },
+    {
+      type: 'SUBTITLE',
+      content: 'Syntax',
+    },
+    {
+      type: 'CODE',
+      content:
+        '@Component({\n  ...\n  animations: [...]\n})\nexport class TitleComponent {}',
+    },
+    {
+      type: 'TEXT',
+      content:
+        'The animation can refer to a element in the template of the component, with the directive <code>@slideIn</code> for example.',
+    },
+    {
+      type: 'CODE',
+      content:
+        '<p @slideIn>My paragraph</p>',
+    },
+    {
+      type: 'TEXT',
+      content:
+        'You can even trigger a animation through a condition variable connected with the animation directly <code>[@slideIn]="onSuccess"</code>.',
+    },
+    {
+      type: 'CODE',
+      content:
+        '<p [@slideIn]="onSuccess">My paragraph</p>',
     },
     {
       type: 'LINE',
@@ -124,6 +129,11 @@ export const ANGULAR_ANIMATIONS: Article = {
     //   content:
     //     "@Component({\n  selector: ‘<app-foo>’,\n  templateUrl: ..., \n  host: { myAnimation: “earth === ‘round’ ? ‘VISIBLE’ : ‘HIDDEN’” },\n  animations: [\n    trigger(myAnimation, [\n      state('HIDDEN', style({ backgroundColor: 'transparent' })),\n      state('VISIBLE', style({ backgroundColor: 'red' })),\n      transition('* => *', animate('300ms ease-in-out')),\n    ]),],})",
     // },
+    {
+      type: 'TEXT',
+      content:
+        "For more information check the article from the auth0 team <a href='https://auth0.com/blog/get-better-angular-ux-using-animation-techniques/#Brief-Overview-of-Angular-Animations' target='_blank'>Brief Overview of Angular Animations</a>.",
+    },
     {
       type: 'LINE',
       content: '<hr/>',

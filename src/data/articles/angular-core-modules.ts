@@ -7,14 +7,38 @@ export const ANGULAR_CORE_MODULES: Article = {
   lastUpdate: '2022-08-15',
   elements: [
     {
+      type: 'TITLE',
+      content:
+        'Introduction',
+    },
+    {
       type: 'TEXT',
       content:
-        'Modules are a great way to organize an application and extend it with capabilities from external libraries. NgModules consolidate components, directives, and pipes into cohesive blocks of functionality, each focused on a feature area, application business domain, workflow, or common collection of utilities.',
+        'Modules are a great way to organize an application by consolidate components, directives, and pipes into cohesive blocks of functionality.',
     },
     {
       type: 'HINT',
       content:
-        'NgModules configure the injector and the compiler and help organize related things together.',
+        "NgModule's configure the injector and the compiler and help organize related things together.",
+    },
+    {
+      type: 'TEXT',
+      content:
+        "Angular libraries are NgModule's, such as <code>FormsModule</code>, <code>HttpClientModule</code>, and <code>RouterModule</code>. Many third-party libraries are available as NgModule's too such as Angular Material.",
+    },
+    {
+      type: 'LINE',
+      content: '<hr/>',
+    },
+    {
+      type: 'TITLE',
+      content:
+        'Requirements',
+    },
+    {
+      type: 'TEXT',
+      content:
+        '<code>NgModule</code> is part of the <code>@angular/core</code> package.',
     },
     {
       type: 'LINE',
@@ -27,7 +51,7 @@ export const ANGULAR_CORE_MODULES: Article = {
     {
       type: 'CODE',
       content:
-        '@NgModule({\n  declarations: [\n    AppComponent\n  ],\n  imports: [ /* add modules here so Angular knows to use them */\n    BrowserModule,\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule {}',
+        '@NgModule({\n  declarations: [AppComponent],\n  imports: [],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule {}',
     },
     {
       type: 'LINE',
@@ -45,7 +69,7 @@ export const ANGULAR_CORE_MODULES: Article = {
       type: 'LIST',
       content: 'References:',
       list: [
-        "NgModules | 2022-08-14 | <a href='https://angular.io/guide/ngmodules' target='_blank' rel='noopener noreferrer'>https://angular.io/guide/ngmodules</a>",
+        "NgModules | 2022-11-03 | <a href='https://angular.io/guide/ngmodules' target='_blank' rel='noopener noreferrer'>https://angular.io/guide/ngmodules</a>",
         "NgModule | 2022-08-14 | <a href='https://angular.io/api/core/NgModule' target='_blank' rel='noopener noreferrer'>https://angular.io/api/core/NgModule</a>",
       ],
     },

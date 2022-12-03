@@ -1,18 +1,30 @@
 import { Article } from '.';
 
 export const INTRODUCTION_AND_BASICS: Article = {
-  url: 'introduction-and-basics',
-  title: 'Introduction & Basics',
+  url: 'get-started-with-angular',
+  title: 'Get started with Angular',
   date: '2022-08-28',
-  lastUpdate: '2022-08-29',
+  lastUpdate: '2022-11-03',
   elements: [
     {
       type: 'TITLE',
-      content: 'Prerequisites',
+      content: 'Introduction',
     },
     {
       type: 'TEXT',
-      content: 'You should be familiar with JavaScript and TypeScript.',
+      content: 'Angular is an TypeScript framework and development platform for creating efficient and sophisticated single-page applications.',
+    },
+    {
+      type: 'LINE',
+      content: '<hr/>',
+    },
+    {
+      type: 'TITLE',
+      content: 'Requirements',
+    },
+    {
+      type: 'TEXT',
+      content: 'You should be familiar with JavaScript and TypeScript, HTML, CSS and basic web development.',
     },
     {
       type: 'LINE',
