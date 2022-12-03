@@ -5,11 +5,15 @@
       {{ article.date | date: "MMMM d, y" }}
     </small>
   </div>
+
+  <hr class="horizontal"/>
+
   <ngnr-post-element
     *ngFor="let el of article.elements"
     [element]="el"
   ></ngnr-post-element>
 </ng-container>
+
 <ng-template #errorMessage>
   <p>Article not found</p>
 </ng-template>
