@@ -10,7 +10,7 @@ const routes: Routes = [
   {
     path: ':url',
     loadChildren: () =>
-      import('src/app/modules/articles/article/article.module').then(
+      import('src/app/modules/article/article.module').then(
         (m) => m.ArticleModule
       ),
   },
