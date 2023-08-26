@@ -1,17 +1,19 @@
 import { Component } from '@angular/core';
-import { Theme, ThemeService } from '../../shared/theme.service';
-import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { Theme, ThemeService } from '@core/shared';
+
+const MAT_MODULES = [MatButtonModule, MatIconModule];
 
 @Component({
   selector: 'ngnr-theme-toggle',
   standalone: true,
-  imports: [MatButtonModule, MatIconModule],
+  imports: [...MAT_MODULES],
   template: `
     <button
       mat-icon-button
       type="button"
-      (click)="theme.toggle()"
+      (click)="toggleTheme()"
       [title]="toggleLabel"
       [attr.aria-label]="toggleLabel"
     >
@@ -21,14 +23,18 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class ThemeToggleComponent {
   public get toggleLabel(): string {
-    return `Zum ${this.theme.isDark ? Theme.LIGHT : Theme.DARK} mode wechseln`;
+    return `Zum ${this.theme} mode wechseln`;
   }
 
   public get themeIcon(): string {
-    return `${this.theme.isDark ? Theme.LIGHT : Theme.DARK}_mode`;
+    return `${this.theme}_mode`;
   }
 
-  public Theme = Theme;
+  private readonly theme = this.themeService.isDark ? Theme.LIGHT : Theme.DARK;
 
-  constructor(public theme: ThemeService) {}
+  constructor(private themeService: ThemeService) {}
+
+  toggleTheme(): void {
+    this.themeService.toggle();
+  }
 }

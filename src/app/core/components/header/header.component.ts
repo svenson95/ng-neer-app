@@ -1,10 +1,13 @@
-import { Component, Input } from '@angular/core';
-import { AppIconComponent } from '../app-icon/app-icon.component';
-import { MatButtonModule } from '@angular/material/button';
-import { RouterModule } from '@angular/router';
-import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
 import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { RouterModule } from '@angular/router';
+import { AppIconComponent, ThemeToggleComponent } from '@core/components';
+
+const MAT_MODULES = [MatButtonModule, MatProgressSpinnerModule,]
+
+const STANDALONE_COMPONENTS = [AppIconComponent, ThemeToggleComponent,]
 
 @Component({
   selector: 'header',
@@ -13,10 +16,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
   imports: [
     CommonModule,
     RouterModule,
-    MatButtonModule,
-    MatProgressSpinnerModule,
-    AppIconComponent,
-    ThemeToggleComponent,
+    ...MAT_MODULES,
+    ...STANDALONE_COMPONENTS
   ],
 })
 export class HeaderComponent {

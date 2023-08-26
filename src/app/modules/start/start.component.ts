@@ -1,17 +1,14 @@
 import { NestedTreeControl } from '@angular/cdk/tree';
 import { Component } from '@angular/core';
 import { MatTreeNestedDataSource } from '@angular/material/tree';
-import { TopicNode } from 'src/app/core/models/angular-tree';
-import {
-  ADVANCED_DATA,
-  ECOSYSTEM_DATA,
-  FUNDAMENTALS_DATA,
-} from 'src/data/angular-tree';
+import { TopicNode } from '@core/models';
+import { ADVANCED_DATA, ECOSYSTEM_DATA, FUNDAMENTALS_DATA } from "@data/angular-tree";
 
 interface TreeData {
   control: NestedTreeControl<TopicNode>;
   data: MatTreeNestedDataSource<TopicNode>;
 }
+
 @Component({
   selector: 'ngnr-start',
   templateUrl: './start.component.html',
@@ -27,7 +24,4 @@ export class StartComponent {
     dataSource.data = tree;
     return { control, data: dataSource };
   }
-
-  hasChild = (_: number, node: TopicNode) =>
-    !!node.children && node.children.length > 0;
 }

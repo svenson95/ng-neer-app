@@ -1,16 +1,11 @@
 import { CommonModule } from '@angular/common';
-import {
-  ChangeDetectionStrategy,
-  Component,
-  HostBinding,
-  Input,
-  OnInit,
-} from '@angular/core';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { PostElement, SublistItem } from '../../models/post/element';
+import { ChangeDetectionStrategy, Component, HostBinding, Input, OnInit, } from '@angular/core';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { PostElementType } from '../../models/post/element-type';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { PostElement, PostElementType, SublistItem } from '@core/models';
 import { HighlightModule } from 'ngx-highlightjs';
+
+const MAT_MODULES = [MatProgressSpinnerModule];
 
 @Component({
   selector: 'ngnr-post-element',
@@ -18,9 +13,8 @@ import { HighlightModule } from 'ngx-highlightjs';
   standalone: true,
   imports: [
     CommonModule,
-    MatProgressSpinnerModule,
+    ...MAT_MODULES,
     HighlightModule,
-    PostElementComponent,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ArticlesComponent } from './articles.component';
+import { ArticlesComponent } from './components';
 
 const routes: Routes = [
   {
@@ -10,7 +10,7 @@ const routes: Routes = [
   {
     path: ':url',
     loadChildren: () =>
-      import('src/app/modules/article/article.module').then(
+      import('./modules/article/article.module').then(
         (m) => m.ArticleModule
       ),
   },

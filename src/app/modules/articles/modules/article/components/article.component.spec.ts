@@ -1,8 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute } from "@angular/router";
+import { TEST_ARTICLES } from "@data/articles";
 import { of } from "rxjs";
-import { TEST_ARTICLES } from "../../../data/articles";
-
 import { ArticleComponent } from './article.component';
 
 describe('ArticleComponent', () => {

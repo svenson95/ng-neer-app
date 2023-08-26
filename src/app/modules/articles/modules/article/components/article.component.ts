@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Article, TEST_ARTICLES } from 'src/data/articles';
+import { Article, TEST_ARTICLES } from '@data/articles';
 
 @Component({
   selector: 'ngnr-article',

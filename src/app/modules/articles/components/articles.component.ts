@@ -1,16 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { TEST_ARTICLES } from 'src/data/articles';
+import { Component } from '@angular/core';
+import { TEST_ARTICLES } from '@data/articles';
 
 @Component({
   selector: 'ngnr-articles',
   templateUrl: './articles.component.html',
 })
-export class ArticlesComponent implements OnInit {
+export class ArticlesComponent {
   public articles = TEST_ARTICLES;
-
-  constructor() {}
-
-  ngOnInit(): void {}
 
   public removeHrefs(str: string): string {
     return str.replace(/(<([^>]+)>)/gi, '');

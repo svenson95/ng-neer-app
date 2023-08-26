@@ -1,14 +1,10 @@
 import { NgModule } from '@angular/core';
+import { FooterComponent, HeaderComponent } from './components';
 
-import { FooterComponent } from './components/footer/footer.component';
-import { HeaderComponent } from './components/header/header.component';
-
-const exportComponents = [HeaderComponent, FooterComponent];
+const STANDALONE_COMPONENTS = [HeaderComponent, FooterComponent];
 
 @NgModule({
-  declarations: [],
-  imports: [exportComponents],
-  exports: [exportComponents],
-  providers: [],
+  imports: [...STANDALONE_COMPONENTS],
+  exports: [...STANDALONE_COMPONENTS],
 })
 export class CoreModule {}
