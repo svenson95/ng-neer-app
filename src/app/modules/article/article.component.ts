@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Article, TEST_ARTICLES } from 'src/data/articles';
 
 @Component({
@@ -9,16 +9,14 @@ import { Article, TEST_ARTICLES } from 'src/data/articles';
 export class ArticleComponent {
   public article: Article | undefined;
 
-  constructor(private router: Router) {
-    this.initializeArticle();
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    const articleUrl = this.route.snapshot.params['url'];
+    this.article = this.getArticleBy(articleUrl);
   }
 
-  initializeArticle() {
-    const url = this.router.url;
-    const articleUrl = url.substring(url.indexOf('/', 2) + 1, url.length);
-    const article = TEST_ARTICLES.find((el) => articleUrl === el.url);
-    if (article) {
-      this.article = article;
-    }
+  getArticleBy(url: string): Article | undefined {
+    return TEST_ARTICLES.find((el) => url === el.url);
   }
 }
