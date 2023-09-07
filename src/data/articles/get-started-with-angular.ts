@@ -1,6 +1,6 @@
 import { Article } from '.';
 
-export const INTRODUCTION_AND_BASICS: Article = {
+export const GET_STARTED_WITH_ANGULAR: Article = {
   url: 'get-started-with-angular',
   title: 'Get started with Angular',
   date: '2022-08-28',
@@ -63,11 +63,16 @@ export const INTRODUCTION_AND_BASICS: Article = {
     },
     {
       type: 'SUBTITLE',
-      content: 'Life-cycle methods',
+      content: 'Models',
     },
     {
       type: 'TEXT',
-      content: 'The constructor().',
+      content: 'Use a props object in the constructor.',
+    },
+    {
+      type: 'CODE',
+      content:
+        "interface IPerson {\n  name: string;\n  age: number;\n  }\n\nclass Person {\n  name: string;\n  age: number;\n\n  constructor(props: IPerson) {\n    this.name = props.name;\n    this.age = props.age;\n  }\n}",
     },
     {
       type: 'LINE',
