@@ -12,8 +12,8 @@ import {
 import { AppIconComponent } from './core/components/app-icon/app-icon.component';
 import { STORAGE_PROVIDERS } from './core/shared/storage.service';
 import { windowProvider, WindowToken } from './core/shared/window';
-import { MatButtonModule } from '@angular/material/button';
-import { MatTabsModule } from '@angular/material/tabs';
+import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
+import { MatLegacyTabsModule as MatTabsModule } from '@angular/material/legacy-tabs';
 import { RouterModule, TitleStrategy } from '@angular/router';
 import { PageTitleStrategy } from './core/shared/page.title-strategy';
 import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';

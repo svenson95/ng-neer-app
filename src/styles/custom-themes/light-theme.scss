@@ -12,7 +12,7 @@ $ng-neer-app-theme: mat.define-light-theme(
   )
 );
 
-@include mat.all-component-themes($ng-neer-app-theme);
+@include mat.all-legacy-component-themes($ng-neer-app-theme);
 @include app-theme.theme($ng-neer-app-theme);
 
 /* ngx highlightjs - Code Highlighting (https://github.com/highlightjs/highlight.js/tree/main/src/styles) */
