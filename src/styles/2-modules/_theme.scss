@@ -1,9 +1,9 @@
-@use "articles/articles-theme";
+@use "article/article-theme";
 @use "history/history-theme";
-@use "start/start-theme";
+@use "roadmap/roadmap-theme";
 
 @mixin theme($theme) {
-  @include articles-theme.theme($theme);
+  @include article-theme.theme($theme);
   @include history-theme.theme($theme);
-  @include start-theme.theme($theme);
+  @include roadmap-theme.theme($theme);
 }

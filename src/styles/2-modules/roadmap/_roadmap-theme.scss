@@ -13,6 +13,11 @@
   }
 
   mat-tree.neer-tree .mat-tree-node {
+    &.is-link {
+      cursor: pointer;
+      color: constants.$neer-color-primary;
+    }
+
     border-bottom-color: if(
       $is-dark-theme,
       rgba(constants.$neer-font-color-3-light, 0.5),

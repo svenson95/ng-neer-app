@@ -6,8 +6,9 @@
   <mat-tree-node
     *matTreeNodeDef="let node"
     matTreeNodeToggle
-    [innerHTML]="node.name"
   >
+    <a *ngIf="!!node.url; else plainText" [routerLink]="routerLinkFrom(node.url)">{{ node.name }}</a>
+    <ng-template #plainText>{{ node.name }}</ng-template>
   </mat-tree-node>
   <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild">
     <div class="mat-tree-node">

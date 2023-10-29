@@ -1,4 +1,11 @@
 <mat-tab-group>
+  <mat-tab label="Start">
+    <ngnr-tree
+      *ngIf="start"
+      [treeControl]="start.control"
+      [dataSource]="start.data"
+    ></ngnr-tree>
+  </mat-tab>
   <mat-tab label="Fundamentals">
     <ngnr-tree
       *ngIf="fundamentals"

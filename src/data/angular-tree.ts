@@ -1,17 +1,28 @@
 import { TopicNode } from 'src/app/core/models/angular-tree';
 
+export const START_DATA: TopicNode[] = [
+  { name: 'Angular CLI' },
+  { name: 'Init project', url: "get-started-with-angular" },
+  { name: 'Project Structure' },
+];
+
 export const FUNDAMENTALS_DATA: TopicNode[] = [
   {
-    name: '<a href="/articles/get-started-with-angular">Get started with Angular</a>',
+    name: 'Modules',
+    children: [
+      { name: "Overview", url: "angular-core-ngmodules" }
+    ]
   },
-  { name: 'Angular CLI' },
-  { name: 'Project / Folder Structure' },
-  { name: '<a href="/articles/angular-core-components">Components</a>' },
-  { name: '<a href="/articles/angular-core-ngmodules">NgModules</a>' },
+  {
+    name: 'Components',
+    children: [
+      { name: "Overview", url: "angular-core-components" }
+    ]
+  },
   {
     name: 'Pipes',
     children: [
-      { name: 'Options' },
+      { name: 'Overview' },
       { name: 'Pure function by default, for recurring tasks' },
     ],
   },
@@ -50,7 +61,7 @@ export const FUNDAMENTALS_DATA: TopicNode[] = [
     ],
   },
   {
-    name: '<a href="/articles/angular-core-injectable-services">Services</a>',
+    name: 'Services', url: "angular-core-injectable-services",
   },
   {
     name: 'Routing',
@@ -116,7 +127,7 @@ export const ADVANCED_DATA: TopicNode[] = [
     ],
   },
   {
-    name: '<a href="/articles/angular-animations">Animations</a>',
+    name: 'Animations', url: "angular-animations",
   },
   {
     name: 'Server-Side-Rendering (SSR)',
@@ -132,12 +143,12 @@ export const ECOSYSTEM_DATA: TopicNode[] = [
   {
     name: 'Angular Material',
     children: [
-      { name: '<a href="/articles/angular-material-theming">Theming</a>' },
+      { name: 'Theming', url: "angular-material-theming" },
       {
         name: 'Components',
         children: [
           {
-            name: '<a href="/articles/angular-material-components-stepper">mat-stepper</a>',
+            name: 'mat-stepper', url: "angular-material-components-stepper",
           },
         ],
       },

@@ -5,10 +5,10 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    loadChildren: () => import('./modules/start/start.module').then((m) => m.StartModule),
+    loadChildren: () => import('./modules/roadmap/roadmap.module').then((m) => m.RoadmapModule),
   },
   {
-    path: 'articles/:url',
+    path: 'article/:url',
     title: 'Article',
     loadChildren: () => import('./modules/article/article.module').then((m) => m.ArticleModule),
   },
