@@ -5,24 +5,17 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    loadChildren: () =>
-      import('./modules/start/start.module').then((m) => m.StartModule),
+    loadChildren: () => import('./modules/start/start.module').then((m) => m.StartModule),
   },
   {
-    path: 'articles',
-    title: 'Articles',
-    data: { animation: 'ArticlesPage' },
-    loadChildren: () =>
-      import('./modules/articles/articles.module').then(
-        (m) => m.ArticlesModule
-      ),
+    path: 'articles/:url',
+    title: 'Article',
+    loadChildren: () => import('./modules/article/article.module').then((m) => m.ArticleModule),
   },
   {
     path: 'history',
     title: 'History',
-    data: { animation: 'HistoryPage' },
-    loadChildren: () =>
-      import('./modules/history/history.module').then((m) => m.HistoryModule),
+    loadChildren: () => import('./modules/history/history.module').then((m) => m.HistoryModule),
   },
 ];
 

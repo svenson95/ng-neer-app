@@ -18,19 +18,14 @@ export class AppComponent implements OnDestroy {
 
   public navLinks = [
     {
-      label: 'Start',
+      label: 'Roadmap',
       link: '',
       index: 0,
     },
     {
-      label: 'Articles',
-      link: 'articles',
-      index: 1,
-    },
-    {
       label: 'History',
       link: 'history',
-      index: 2,
+      index: 1,
     },
   ];
 
@@ -51,13 +46,11 @@ export class AppComponent implements OnDestroy {
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(() => {
         const url = this.router.url.substring(1);
-        const tab = this.navLinks.find(
-          (tab) =>
-            url === tab.link || (tab.link !== '' && url.includes(tab.link))
-        );
-        if (!tab) return console.log('tab not found');
-
-        this.activeLinkIndex = this.navLinks.indexOf(tab);
+        if (url === "" || url.includes("articles/")) {
+          this.activeLinkIndex = 0;
+        } else if (url === "history") {
+          this.activeLinkIndex = 1;
+        }
       });
   }
 

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Article, TEST_ARTICLES } from '@data/articles';
 
@@ -6,7 +6,7 @@ import { Article, TEST_ARTICLES } from '@data/articles';
   selector: 'ngnr-article',
   templateUrl: './article.component.html',
 })
-export class ArticleComponent {
+export class ArticleComponent implements OnInit {
   public article: Article | undefined;
 
   constructor(private route: ActivatedRoute) {}
