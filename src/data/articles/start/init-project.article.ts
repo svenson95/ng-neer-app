@@ -7,6 +7,10 @@ export const START_INIT_PROJECT: Article = {
   lastUpdate: '2022-11-03',
   elements: [
     {
+      type: 'TITLE',
+      content: 'Angular CLI'
+    },
+    {
       type: 'TEXT',
       content: 'The Angular CLI is a command-line interface tool that you use to initialize, develop, scaffold, and maintain Angular applications directly from a command shell.'
     },

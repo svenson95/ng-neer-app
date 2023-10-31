@@ -1,10 +1,10 @@
 import { TopicNode } from "@modules/roadmap/models";
 
 export const START_DATA: TopicNode[] = [
-  { name: 'Basics and Requirements', url: 'basics-and-requirements' },
-  { name: 'Angular CLI' },
+  { name: 'Concepts', url: 'concepts' },
   { name: 'Init project', url: 'init-project' },
   { name: 'Project Structure' },
+  { name: 'Classes', url: 'classes' },
 ];
 
 export const FUNDAMENTALS_DATA: TopicNode[] = [
@@ -17,7 +17,8 @@ export const FUNDAMENTALS_DATA: TopicNode[] = [
   {
     name: 'Components',
     children: [
-      { name: "Overview", url: 'components' }
+      { name: "Overview", url: 'components-overview' },
+      { name: "Life-Cycles", url: 'components-life-cylces' },
     ]
   },
   {

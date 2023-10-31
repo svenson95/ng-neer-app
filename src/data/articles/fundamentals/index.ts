@@ -1,8 +1,9 @@
-import { RoadmapCategory } from "../../../app/modules/roadmap/models/roadmap-category";
+import { RoadmapCategory } from "@modules/roadmap/models";
 
 export * from './change-detection-ref.article';
 export * from './change-detection-strategy.article';
-export * from './components.article';
+export * from './components-life-cycles.article';
+export * from './components-overview.article';
 export * from './modules.article';
 export * from './services.article';
 

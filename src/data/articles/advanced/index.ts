@@ -1,4 +1,4 @@
-import { RoadmapCategory } from "../../../app/modules/roadmap/models/roadmap-category";
+import { RoadmapCategory } from "@modules/roadmap/models";
 
 export * from './animations.article';
 

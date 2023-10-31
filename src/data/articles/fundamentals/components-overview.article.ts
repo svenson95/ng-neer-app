@@ -1,7 +1,7 @@
 import { Article } from '../index';
 
 export const FUNDAMENTALS_COMPONENTS: Article = {
-  url: 'components',
+  url: 'components-overview',
   title: '@angular/core | Components',
   date: '2022-08-07',
   lastUpdate: '2022-08-07',

@@ -2,7 +2,7 @@ import { NestedTreeControl } from '@angular/cdk/tree';
 import { Component } from '@angular/core';
 import { MatTreeNestedDataSource } from '@angular/material/tree';
 import { TopicNode, RoadmapCategory } from '@modules/roadmap/models';
-import { ADVANCED_DATA, ECOSYSTEM_DATA, FUNDAMENTALS_DATA, START_DATA } from "@data/angular-tree";
+import { ADVANCED_DATA, ECOSYSTEM_DATA, FUNDAMENTALS_DATA, START_DATA } from "@data/roadmap-tree";
 
 interface TreeData {
   control: NestedTreeControl<TopicNode>;
@@ -16,15 +16,15 @@ interface TreeData {
 export class RoadmapComponent {
   protected readonly RoadmapCategory = RoadmapCategory;
 
-  start: TreeData = this.setTreeData(START_DATA);
-  fundamentals: TreeData = this.setTreeData(FUNDAMENTALS_DATA);
-  advanced: TreeData = this.setTreeData(ADVANCED_DATA);
-  ecosystem: TreeData = this.setTreeData(ECOSYSTEM_DATA);
-
-  private setTreeData(tree: any): TreeData {
+  private initTreeDataFrom = (data: TopicNode[]): TreeData => {
     const control = new NestedTreeControl<TopicNode>((node) => node.children);
     const dataSource = new MatTreeNestedDataSource<TopicNode>();
-    dataSource.data = tree;
+    dataSource.data = data;
     return { control, data: dataSource };
   }
+
+  readonly start: TreeData = this.initTreeDataFrom(START_DATA);
+  readonly fundamentals: TreeData = this.initTreeDataFrom(FUNDAMENTALS_DATA);
+  readonly advanced: TreeData = this.initTreeDataFrom(ADVANCED_DATA);
+  readonly ecosystem: TreeData = this.initTreeDataFrom(ECOSYSTEM_DATA);
 }

@@ -1,6 +1,7 @@
-import { RoadmapCategory } from "../../../app/modules/roadmap/models/roadmap-category";
+import { RoadmapCategory } from "@modules/roadmap/models";
 
-export * from './basics-and-requirements.article';
+export * from './classes.article';
+export * from './concepts.article';
 export * from './init-project.article';
 
 export const ARTICLE_PREFIX_START = RoadmapCategory.START.toLowerCase();
