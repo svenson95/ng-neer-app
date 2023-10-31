@@ -1,6 +1,6 @@
-import { Article } from '.';
+import { Article } from '../index';
 
-export const ANGULAR_MATERIAL_COMPONENTS_STEPPER: Article = {
+export const ECOSYSTEM_ANGULAR_MATERIAL_COMPONENTS_STEPPER: Article = {
   url: 'angular-material-components-stepper',
   title: '@angular/material/stepper',
   date: '2022-08-27',

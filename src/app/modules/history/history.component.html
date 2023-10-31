@@ -1,7 +1,6 @@
 <h1 class="mat-headline title">The journey of Angular</h1>
 <p class="mat-body">
-  <a href="https://angular.io/" target="_blank">Angular</a> is a
-  <abbr title="Superset of JavaScript">TypeScript</abbr>-based frontend
+  <a href="https://angular.io/" target="_blank">Angular</a> is a TypeScript-based frontend
   framework maintained by Google. It provides a standard structure with core and
   optional functionality to build client-side web applications. Since version 4
   (2017) new major versions releases every 6 months.
@@ -25,7 +24,7 @@
         </small>
       </div>
 
-      <p [innerHTML]="version.description"></p>
+      <p class="py-3" [innerHTML]="version.description"></p>
       <a [href]="version.link" *ngIf="version.link">{{ version.link }}</a>
 
       <ul>

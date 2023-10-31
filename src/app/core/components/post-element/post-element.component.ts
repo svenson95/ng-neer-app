@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, HostBinding, Input, OnInit, } from '@angular/core';
 import { MatLegacyProgressSpinnerModule as MatProgressSpinnerModule } from '@angular/material/legacy-progress-spinner';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { PostElement, PostElementType, SublistItem } from '@core/models';
+import { PostElement, PostElementType, SublistItem } from "@modules/article/models";
 import { HighlightModule } from 'ngx-highlightjs';
 
 const MAT_MODULES = [MatProgressSpinnerModule];

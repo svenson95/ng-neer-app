@@ -1,7 +1,7 @@
-import { Article } from '.';
+import { Article } from '../index';
 
-export const ANGULAR_CORE_CHANGE_DETECTION_REF: Article = {
-  url: 'angular-core-change-detection-ref',
+export const FUNDAMENTALS_CHANGE_DETECTION_REF: Article = {
+  url: 'change-detection-ref',
   title: '@angular/core | ChangeDetectionRef',
   date: '2022-11-04',
   lastUpdate: '2022-11-04',

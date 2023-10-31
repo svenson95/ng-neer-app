@@ -1,10 +1,10 @@
-import { Article } from '.';
+import { Article } from '../index';
 
-export const GET_STARTED_WITH_ANGULAR: Article = {
-  url: 'get-started-with-angular',
-  title: 'Get started with Angular',
-  date: '2022-08-28',
-  lastUpdate: '2022-11-03',
+export const START_BASICS_AND_REQUIREMENTS: Article = {
+  url: 'basics-and-requirements',
+  title: 'Basics & Requirements',
+  date: '2023-10-31',
+  lastUpdate: '2023-10-31',
   elements: [
     {
       type: 'TITLE',

@@ -8,7 +8,7 @@ const routes: Routes = [
     loadChildren: () => import('./modules/roadmap/roadmap.module').then((m) => m.RoadmapModule),
   },
   {
-    path: 'article/:url',
+    path: 'article/:category/:article',
     title: 'Article',
     loadChildren: () => import('./modules/article/article.module').then((m) => m.ArticleModule),
   },

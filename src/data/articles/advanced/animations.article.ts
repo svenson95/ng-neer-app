@@ -1,7 +1,7 @@
-import { Article } from '.';
+import { Article } from '../index';
 
-export const ANGULAR_ANIMATIONS: Article = {
-  url: 'angular-animations',
+export const ADVANCED_ANIMATIONS: Article = {
+  url: 'animations',
   title: '@angular/animations',
   date: '2022-05-20',
   lastUpdate: '2022-07-29',

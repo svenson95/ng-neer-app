@@ -1,8 +1,9 @@
-import { TopicNode } from 'src/app/core/models/angular-tree';
+import { TopicNode } from "@modules/roadmap/models";
 
 export const START_DATA: TopicNode[] = [
+  { name: 'Basics and Requirements', url: 'basics-and-requirements' },
   { name: 'Angular CLI' },
-  { name: 'Init project', url: "get-started-with-angular" },
+  { name: 'Init project', url: 'init-project' },
   { name: 'Project Structure' },
 ];
 
@@ -10,13 +11,13 @@ export const FUNDAMENTALS_DATA: TopicNode[] = [
   {
     name: 'Modules',
     children: [
-      { name: "Overview", url: "angular-core-ngmodules" }
+      { name: "Overview", url: 'modules' }
     ]
   },
   {
     name: 'Components',
     children: [
-      { name: "Overview", url: "angular-core-components" }
+      { name: "Overview", url: 'components' }
     ]
   },
   {
@@ -29,17 +30,14 @@ export const FUNDAMENTALS_DATA: TopicNode[] = [
   {
     name: 'Directives',
     children: [
+      { name: 'Overview' },
       {
         name: 'Component',
         children: [
-          { name: 'logic binding for html elements' },
-          {
-            name: 'Class Binding [class.is-selected]="element.isSelected"',
-          },
+          { name: 'CommonModule' },
+          { name: 'Class Binding [class.is-selected]="element.isSelected"' },
           { name: 'Attribute Binding [attr.colspan]="tableItem.colSpan"' },
-          {
-            name: 'Style Binding [style.background-color]="\'red\'"',
-          },
+          { name: 'Style Binding [style.background-color]="\'red\'"' },
           {
             name: 'Interaction',
             children: [
@@ -60,9 +58,7 @@ export const FUNDAMENTALS_DATA: TopicNode[] = [
       },
     ],
   },
-  {
-    name: 'Services', url: "angular-core-injectable-services",
-  },
+  { name: 'Services', url: 'services' },
   {
     name: 'Routing',
     children: [
@@ -126,9 +122,7 @@ export const ADVANCED_DATA: TopicNode[] = [
       { name: 'ngSubmit' },
     ],
   },
-  {
-    name: 'Animations', url: "angular-animations",
-  },
+  { name: 'Animations', url: 'animations' },
   {
     name: 'Server-Side-Rendering (SSR)',
     children: [{ name: 'Angular Universal' }],
@@ -143,13 +137,11 @@ export const ECOSYSTEM_DATA: TopicNode[] = [
   {
     name: 'Angular Material',
     children: [
-      { name: 'Theming', url: "angular-material-theming" },
+      { name: 'Theming', url: 'angular-material-theming' },
       {
         name: 'Components',
         children: [
-          {
-            name: 'mat-stepper', url: "angular-material-components-stepper",
-          },
+          { name: 'mat-stepper', url: 'angular-material-components-stepper' },
         ],
       },
     ],

@@ -1,8 +1,8 @@
-import { Article } from '.';
+import { Article } from '../index';
 
-export const ANGULAR_CORE_MODULES: Article = {
-  url: 'angular-core-ngmodules',
-  title: '@angular/core | NgModules',
+export const FUNDAMENTALS_MODULES: Article = {
+  url: 'modules',
+  title: '@angular/core | Modules',
   date: '2022-08-14',
   lastUpdate: '2022-08-15',
   elements: [

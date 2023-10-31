@@ -1,7 +1,7 @@
 import { NestedTreeControl } from '@angular/cdk/tree';
 import { Component } from '@angular/core';
 import { MatTreeNestedDataSource } from '@angular/material/tree';
-import { TopicNode } from '@core/models';
+import { TopicNode, RoadmapCategory } from '@modules/roadmap/models';
 import { ADVANCED_DATA, ECOSYSTEM_DATA, FUNDAMENTALS_DATA, START_DATA } from "@data/angular-tree";
 
 interface TreeData {
@@ -14,6 +14,8 @@ interface TreeData {
   templateUrl: './roadmap.component.html',
 })
 export class RoadmapComponent {
+  protected readonly RoadmapCategory = RoadmapCategory;
+
   start: TreeData = this.setTreeData(START_DATA);
   fundamentals: TreeData = this.setTreeData(FUNDAMENTALS_DATA);
   advanced: TreeData = this.setTreeData(ADVANCED_DATA);

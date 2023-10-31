@@ -1,4 +1,4 @@
-import { AngularVersion } from 'src/app/core/models/angular-version';
+import { AngularVersion } from '@modules/history/models';
 
 export const versions: Array<AngularVersion> = [
   {

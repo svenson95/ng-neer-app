@@ -12,7 +12,7 @@ export class ArticleComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    const articleUrl = this.route.snapshot.params['url'];
+    const articleUrl = this.route.snapshot.params['article'];
     this.article = this.getArticleBy(articleUrl);
   }
 

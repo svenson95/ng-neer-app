@@ -7,7 +7,7 @@ import { ArticleComponent } from './article.component';
 describe('ArticleComponent', () => {
   let component: ArticleComponent;
   let fixture: ComponentFixture<ArticleComponent>;
-  let testUrl = "get-started-with-angular";
+  let testUrl = "init-project";
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({

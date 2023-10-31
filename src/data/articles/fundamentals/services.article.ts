@@ -1,7 +1,7 @@
-import { Article } from '.';
+import { Article } from '../index';
 
-export const ANGULAR_CORE_SERVICES: Article = {
-  url: 'angular-core-services',
+export const FUNDAMENTALS_SERVICES: Article = {
+  url: 'services',
   title: '@angular/core | Services',
   date: '2022-08-14',
   lastUpdate: '2022-08-27',

@@ -1,7 +1,7 @@
-import { Article } from '.';
+import { Article } from '../index';
 
-export const ANGULAR_CORE_COMPONENTS: Article = {
-  url: 'angular-core-components',
+export const FUNDAMENTALS_COMPONENTS: Article = {
+  url: 'components',
   title: '@angular/core | Components',
   date: '2022-08-07',
   lastUpdate: '2022-08-07',

@@ -1,26 +1,41 @@
-export { ANGULAR_CORE_COMPONENTS } from './angular-core-compoents';
-export { ANGULAR_CORE_MODULES } from './angular-core-modules';
-export { ANGULAR_CORE_SERVICES } from './angular-core-services';
-export { ANGULAR_CORE_CHANGE_DETECTION_REF } from "./angular-core-change-detection-ref";
-export { ANGULAR_CORE_CHANGE_DETECTION_STRATEGY } from "./angular-core-change-detection-strategy";
-export { ANGULAR_ANIMATIONS } from './angular-animations';
-export { ANGULAR_MATERIAL_COMPONENTS_STEPPER } from './angular-material-components-stepper';
-export { ANGULAR_MATERIAL_THEMING } from './angular-material-theming';
-export { GET_STARTED_WITH_ANGULAR } from './get-started-with-angular';
+import { ARTICLE_PREFIX_START, START_BASICS_AND_REQUIREMENTS } from "@data/articles/start";
+export {
+  START_BASICS_AND_REQUIREMENTS,
+  START_INIT_PROJECT
+} from '@data/articles/start';
 
-import { PostElement } from 'src/app/core/models/post/element';
+import { ARTICLE_PREFIX_FUNDAMENTALS } from "@data/articles/fundamentals";
+export {
+  FUNDAMENTALS_COMPONENTS,
+  FUNDAMENTALS_MODULES,
+  FUNDAMENTALS_SERVICES,
+  FUNDAMENTALS_CHANGE_DETECTION_REF,
+  FUNDAMENTALS_CHANGE_DETECTION_STRATEGY
+} from '@data/articles/fundamentals';
+
+import { ADVANCED_ANIMATIONS, ARTICLE_PREFIX_ADVANCED } from '@data/articles/advanced';
+export {
+  ADVANCED_ANIMATIONS,
+} from '@data/articles/advanced';
+
+import { ARTICLE_PREFIX_ECOSYSTEM } from "@data/articles/ecosystem";
+export {
+  ECOSYSTEM_ANGULAR_MATERIAL_COMPONENTS_STEPPER,
+  ECOSYSTEM_ANGULAR_MATERIAL_THEMING
+} from '@data/articles/ecosystem';
+
 import {
-  ANGULAR_ANIMATIONS,
-  ANGULAR_CORE_CHANGE_DETECTION_REF,
-  ANGULAR_CORE_CHANGE_DETECTION_STRATEGY,
-  ANGULAR_CORE_COMPONENTS,
-  ANGULAR_CORE_MODULES,
-  ANGULAR_CORE_SERVICES,
-  ANGULAR_MATERIAL_COMPONENTS_STEPPER,
-  ANGULAR_MATERIAL_THEMING,
-  GET_STARTED_WITH_ANGULAR,
+  FUNDAMENTALS_CHANGE_DETECTION_REF,
+  FUNDAMENTALS_CHANGE_DETECTION_STRATEGY,
+  FUNDAMENTALS_COMPONENTS,
+  FUNDAMENTALS_MODULES,
+  FUNDAMENTALS_SERVICES,
+  ECOSYSTEM_ANGULAR_MATERIAL_COMPONENTS_STEPPER,
+  ECOSYSTEM_ANGULAR_MATERIAL_THEMING,
+  START_INIT_PROJECT,
 } from './index';
 
+import { PostElement } from '@modules/article/models';
 export interface Article {
   _id?: string;
   url: string;
@@ -31,13 +46,22 @@ export interface Article {
 }
 
 export const TEST_ARTICLES: Array<Article> = [
-  GET_STARTED_WITH_ANGULAR,
-  ANGULAR_CORE_MODULES,
-  ANGULAR_CORE_COMPONENTS,
-  ANGULAR_CORE_SERVICES,
-  ANGULAR_CORE_CHANGE_DETECTION_REF,
-  ANGULAR_CORE_CHANGE_DETECTION_STRATEGY,
-  ANGULAR_ANIMATIONS,
-  ANGULAR_MATERIAL_COMPONENTS_STEPPER,
-  ANGULAR_MATERIAL_THEMING,
+  START_BASICS_AND_REQUIREMENTS,
+  START_INIT_PROJECT,
+  FUNDAMENTALS_MODULES,
+  FUNDAMENTALS_COMPONENTS,
+  FUNDAMENTALS_SERVICES,
+  FUNDAMENTALS_CHANGE_DETECTION_REF,
+  FUNDAMENTALS_CHANGE_DETECTION_STRATEGY,
+  ADVANCED_ANIMATIONS,
+  ECOSYSTEM_ANGULAR_MATERIAL_COMPONENTS_STEPPER,
+  ECOSYSTEM_ANGULAR_MATERIAL_THEMING,
 ];
+
+import { RoadmapCategory } from "@modules/roadmap/models";
+export const ROADMAP_CATEGORIES = {
+  [RoadmapCategory.START]: ARTICLE_PREFIX_START,
+  [RoadmapCategory.FUNDAMENTALS]: ARTICLE_PREFIX_FUNDAMENTALS,
+  [RoadmapCategory.ADVANCED]: ARTICLE_PREFIX_ADVANCED,
+  [RoadmapCategory.ECOSYSTEM]: ARTICLE_PREFIX_ECOSYSTEM,
+}

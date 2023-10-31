@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { AngularVersion } from 'src/app/core/models/angular-version';
+import { AngularVersion } from './models/angular-version';
 import { versions } from 'src/data/versions';
 
 @Component({

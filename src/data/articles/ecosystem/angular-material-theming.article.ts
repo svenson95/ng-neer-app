@@ -1,6 +1,6 @@
-import { Article } from '.';
+import { Article } from '../index';
 
-export const ANGULAR_MATERIAL_THEMING: Article = {
+export const ECOSYSTEM_ANGULAR_MATERIAL_THEMING: Article = {
   url: 'angular-material-theming',
   title: '@angular/material/theming',
   date: '2022-08-10',
