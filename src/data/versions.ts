@@ -324,7 +324,7 @@ export const versions: Array<AngularVersion> = [
   },
   {
     title: 'Angular 19',
-    date: '2024-05-22',
+    date: '2024-11-19',
     description:
       'This release is bringing a series of improvements that will make it even easier for you to deliver fast web apps with confidence.',
     link: 'https://blog.angular.dev/meet-angular-v19-7b29dfd05b84',
