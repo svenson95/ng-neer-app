@@ -268,11 +268,11 @@ export const versions: Array<AngularVersion> = [
       'Better unit testing with Jest and Web Test Runner',
       'Autocomplete imports in templates',
       "Required <code>@Input({ required: true })</code>'s",
-      "Passing router data as component inputs",
-      "CSP support for inline-styles",
-      "Flexible ngOnDestroy",
-      "Self-closing tags",
-      "Better and more flexible components",
+      'Passing router data as component inputs',
+      'CSP support for inline-styles',
+      'Flexible ngOnDestroy',
+      'Self-closing tags',
+      'Better and more flexible components',
     ],
   },
   {
@@ -307,6 +307,33 @@ export const versions: Array<AngularVersion> = [
       'Style and styleUrls as strings',
       'Community schematics, we shipped a couple of utility methods as part of <code>@schematics/angular/utility</code>',
       'Training Angular developers, a new Angular training based on the recent “Introduction to Angular” course we developed',
+    ],
+  },
+  {
+    title: 'Angular 18',
+    date: '2024-05-22',
+    description:
+      'The next milestone in the evolution of Angular. Polishing the work shipped by graduating many of the new APIs to stable, addressing common developer requests, and experimentally releasing one of the most desired roadmap projects: zoneless change detection.',
+    link: 'https://blog.angular.dev/angular-v18-is-now-available-e79d5ac0affe',
+    list: [
+      'Experimental support for zoneless change detection',
+      'Angular.dev is now the new home for Angular developers',
+      'Material 3, deferrable views, built-in control flow are now stable and incorporate a series of improvements',
+      'Server-side rendering improvements such as i18n hydration support, better debugging, hydration support in Angular Material, and event replay powered by the same library as Google Search.',
+    ],
+  },
+  {
+    title: 'Angular 19',
+    date: '2024-05-22',
+    description:
+      'This release is bringing a series of improvements that will make it even easier for you to deliver fast web apps with confidence.',
+    link: 'https://blog.angular.dev/meet-angular-v19-7b29dfd05b84',
+    list: [
+      'Developer preview of incremental hydration supporting the most performance demanding use cases',
+      'Control which routes render on the client, server, or during a build and resolve route parameters during prerendering',
+      'Schematics to keep you up to date with the latest best practices — inputs, outputs, queries, inject-based dependency injection, and new build system',
+      'Stabilization of core reactivity primitives and introduction of new ones: linkedSignal and resource',
+      'Series of quality of life improvements addressing feature requests with more than 2,700 👍 on GitHub! This includes time picker component, unused import removal, running schematics via the language service, HMR for styles, and more!',
     ],
   },
 ];
