@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
+  template: `
+    <small class="font-semibold tracking-widest opacity-60">
+      {{ currentYear }} ng-neer
+    </small>
+
+    <small class="font-semibold tracking-widest opacity-60">
+      Made with <span class="font-mono">❤</span> in Magdeburg
+    </small>
+  `,
   selector: 'footer',
-  templateUrl: './footer.component.html',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FooterComponent {
-  public links = [{ href: 'https://github.com/svenson95', label: 'github' }];
+  readonly currentYear = new Date().getFullYear();
 }
